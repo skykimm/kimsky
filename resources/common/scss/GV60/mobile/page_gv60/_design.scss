@@ -1,0 +1,165 @@
+//***********************************************************
+//# name : GV60 design
+//# desc : design
+//***********************************************************
+
+// 공통
+.swiper-slide{
+  [class^='text-wrap bg-gray']{
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.img-wrap .comment-3{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+// //공통
+
+.design{ // intro
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_cover_design.png');
+  }
+}
+
+.design2{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design2.png');
+  }
+  .content02{
+    .swiper-slide{
+      .text-wrap.bg-gray{
+        min-height: 144px;
+      }
+    }
+  }
+    .badge-txt-new{
+    position: absolute;
+  }
+} 
+
+.design3 {
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design3.png');
+  }
+  .content02{
+    .sub-wrap .list-wrap{
+      margin-top: 0;
+      margin-bottom: 13px;
+      dl dd{color: $grey-4d;}
+    }
+  }
+  .content03{
+    .text-wrap.bg-gray{
+      min-height: 144px;
+    }
+  }
+}
+
+.design4{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design4.png');
+  }
+  .content01{
+    .list-wrap dl dd{color: $grey-66;}
+  }
+  .content02{
+    .text-wrap.bg-gray{
+      min-height: 164px;
+    }
+  }
+} 
+
+.design5{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design5.png');
+  }
+  .content01{
+    .sub-wrap .list-wrap{
+      margin-top: 0;
+      dl dd{color: $grey-4d;}
+      .list-wrap{
+        dl{
+          margin-top: 6px;
+          dd{
+            font-size: 12px;
+            color: #757575;
+          }
+        } 
+      }
+    } 
+  }
+  .content02{
+    .text-wrap.bg-gray{
+      min-height: 184px;
+    }
+  }
+  .badge-txt-new{
+    position: absolute;
+  }
+}
+
+.design6{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design6.png');
+  }
+  .content01{
+    .sub-wrap{
+      .comment-3{
+        text-align: right;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .table{
+    tr td .img-wrap{
+      margin-top: 4px;
+    }
+    .color{
+      color: #996449;
+    }
+    &.table-img{
+      .img-wrap{
+        padding: 0 10px;
+      }
+    }
+  }
+  .content02{
+    .text-wrap.bg-gray{
+      min-height: 244px;
+      .text, .comment-3{
+        text-align: left;
+      }
+    } 
+    .swiper-slide:nth-child(2){
+      .title + .text +.text{
+        margin-top: 6px;
+        color: $grey-4d;
+      }
+    }
+  }
+  .badge-txt-new{
+    position: absolute;
+  }
+}
+
+.design7{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_design7.png');
+  }
+  .sub-wrap{
+    .comment-3{
+      text-align: right;
+      margin-bottom: 10px;
+    }
+  }
+  .color{
+    color: #996449;
+  }
+  .content03{
+    .text-wrap.bg-gray{
+      min-height: 140px;
+    }
+  }
+}

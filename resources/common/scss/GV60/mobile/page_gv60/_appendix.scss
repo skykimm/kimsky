@@ -1,0 +1,47 @@
+//***********************************************************
+//# name : GV60 appendix
+//# desc : appendix
+//***********************************************************
+
+.appendix1{
+    .header-wrap{
+        margin-bottom: 12px;
+        .title{
+            margin-bottom: 22px;
+        }
+    }
+    .table{
+        &+.table{
+            margin-top: 20px;
+        }
+        &.table3,&.table4,&.table8{
+            margin-top: 40px;
+        }
+        &.table6{
+            .comment-3{margin-top: 0;}
+        }
+        .comment-3{
+            line-height: 1.3;
+            margin: 6px 0 4px;
+        }
+    }
+}
+
+.appendix2{ 
+    .visual-wrap {
+        background-image: url('../img/gv60/mobile/bg_visual_appendix2.png');
+    }
+    .sub-wrap{
+        .header-wrap .text{margin-bottom: 14px;}
+        &:first-child{
+            margin-top: 0;
+        }
+        .img-wrap .text-wrap{
+            margin-top: 0;
+            padding: 16px 18px 20px;
+            .title,.text{
+                text-align: left;
+            }
+        }
+    }
+}

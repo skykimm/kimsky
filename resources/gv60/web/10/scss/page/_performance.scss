@@ -1,0 +1,31 @@
+.performance3{
+    .content02 .text-wrap .text{
+        width: inherit;
+    }
+    .content03 .sub-wrap{
+        margin-top: 60px;
+    }
+} 
+
+.performance4{
+    .visual-wrap {
+        background-image: url("../img/common/bg_visual_performance4.png");
+    }
+    .content01{
+        .list-wrap.type02 {margin-top: 0;}
+    }
+    .content02{
+        .comment-1{
+            margin-top: 16px;
+            color: #4d4d4d;
+        }
+    }
+} 
+
+.performance5{
+    .content04{
+        .list-wrap.circle-num+.list-wrap.circle-num dd {
+            padding-left: 0;
+        }
+    } 
+}

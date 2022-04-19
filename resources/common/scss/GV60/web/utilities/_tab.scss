@@ -1,0 +1,140 @@
+//default style
+.tab{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  &-wrap{
+    margin: 0 auto;
+    width: 1080px;
+  }
+  &-title{
+    display: flex;
+    font-size: 0;
+    .item{
+      flex:1;
+      font-weight: 100;
+      font-size: 15px;
+      color: #e5e5e5;
+      text-align: center;
+      word-break: break-word;
+      cursor: pointer;
+      @include isStatus('active'){
+        border-color: $color-primary-gv;
+        color: $color-primary-gv;
+        z-index: 1;
+      }
+    }
+  }
+  &-content{
+    position: relative;
+    .item-wrap{
+      display: none;
+      padding: 20px 0;
+      @include isStatus('active'){
+        display: block;
+      }
+      .title{
+        line-height: 1.1;
+        padding-top: 40px;
+        margin: 0 0 16px;
+        @include fontHead(100);
+        font-size: 22px;
+        color: $grey-14;
+        text-align: center;
+        letter-spacing: -0.5px;
+        clear: both;
+      }
+    }
+  }
+}
+
+.tab-box{
+  &>.tab-title{
+    justify-content: flex-end;
+    .item{
+      background-color: $color-primary-gv;
+      border: solid #e5e5e5;
+      border-width: 1px 0 1px 1px;
+      width: 54px;
+      padding: 5px 0;
+      font-weight: 600;
+      color: $white;
+      &:last-child{
+        border-right-width: 1px;
+      }
+      @include isStatus('active'){
+        background-color: $white;
+        border-color: $color-primary-gv;
+        border-width: 1px;
+        color: $color-primary-gv;
+        &+.item{
+          border-left-width: 0;
+        }
+      }
+    }
+  }
+}
+.tab-line{
+  &>.tab-title{
+    .item{
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px 0;
+      @include isStatus('active'){
+        border-color: $color-primary-gv;
+        border-bottom-width: 2px;
+        color: $color-primary-gv;
+      }
+    }
+  }
+}
+.tab-inline{
+  &>.tab-title{
+    display: inline-flex;
+    .item{
+      flex: none;
+    }
+  }
+}
+.tab-mypage{
+  &>.tab-title{
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    .item{
+      display: inline-block;
+      width: 182px;
+      padding: 20px 0;
+      margin-bottom: -1px;
+      font-size: 18px;
+      color: #cccccc;
+      @include isStatus('active'){
+        border-bottom: 2px solid $color-primary-gv;
+        color: $color-primary-gv;
+        font-weight: 600;
+      }
+    }
+  }
+  &>.tab-content{
+    margin: 0 auto;
+    width: 1080px;
+    padding-top: 20px;
+    .item-wrap{
+      padding: 40px 0;
+    }
+  }
+  .tab-box{
+    &>.tab-title{
+      .item{
+        background-color: $white;
+        width: 124px;
+        padding: 10px 0;
+        @include fontBody(400);
+        color: #e5e5e5;
+        @include isStatus('active'){
+          background-color: $white;
+          border-color: $color-primary-gv;
+          color: $color-primary-gv;
+        }
+      }
+    }
+  }
+}

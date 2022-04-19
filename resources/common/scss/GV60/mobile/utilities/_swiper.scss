@@ -1,0 +1,31 @@
+.slide-wrap{
+  position: relative;
+  padding-bottom: 30px;
+  .swiper-slide{
+    overflow: hidden;
+    .btn:first-of-type{
+      margin-bottom: 20px;
+    }
+    .img-wrap{
+      margin: 0 auto;
+    }
+    .text-wrap{
+      .text{
+        margin: 0;
+      }
+    }
+  }
+  .swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $grey-6f;
+  }
+} 
+.swiper-container-horizontal>.swiper-pagination-bullets{
+  bottom: 0;
+  .swiper-pagination-bullet{
+    margin: 0 3px;
+  }
+}

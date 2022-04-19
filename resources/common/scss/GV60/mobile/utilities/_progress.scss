@@ -1,0 +1,26 @@
+progress {
+  background-color: $color-primary-light;
+  border: none;
+  color: $color-primary-gv;
+  &:not([value]){
+    background-color: $color-primary-light;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  }
+/* Firefox */
+  &::-moz-progress-bar {
+    background-color: $color-primary-gv;
+  }
+/* Chrome */
+  &[value]::-webkit-progress-bar {
+    background-color: $color-primary-light;
+  }
+  &::-webkit-progress-value {
+      background-color: $color-primary-gv;
+  }
+/* Polyfill */
+  &[aria-valuenow]:before {
+    background-color: $color-primary-gv;
+  }
+}

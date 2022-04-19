@@ -1,0 +1,325 @@
+//***********************************************************
+//# name : GV60 performance
+//# desc : performance
+//***********************************************************
+
+.performance{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_cover_performance.png');
+  }
+  .comment-3{
+    position: absolute;
+    bottom: 144px;
+    line-height: 16px;
+    font-size: 12px;
+    color: $grey-6f;
+  }
+}   
+
+
+.performance2{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance2.png');
+    .title .comment-3{
+      position: absolute;
+      left: 42px;
+      bottom: 24px;
+      font-size: 12px;
+      color: #c0c0c0;
+    }
+  }
+}
+
+
+.performance3{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance3.png');
+  }
+  .content01{
+    .sub-wrap +.sub-wrap{
+      margin-top: 40px;
+    }
+  }
+  .content02{
+    .text-wrap{
+      .text{
+        display: inline-flex;
+        width: 50%;
+        font-size: 16px;
+        color: #262626;
+        &:nth-child(3),&:nth-child(4){
+          margin-top: 4px;
+        }
+      }
+    }
+    .sub-wrap{margin-top: 40px;}
+  }
+  .content03{
+    .sub-wrap{margin-top: 40px;}
+  }
+  .content04{
+    .text .comment-3 + .comment-3{
+      margin-top: 2px;
+    }
+  }
+  .sub-wrap{
+    .table thead td{
+      font-size: 14px;
+    }
+  }
+  .color{
+    display: inline-block;
+    margin-right: 4px;
+    color: #996449;
+  }
+  .img-wrap .comment-3{
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+}
+
+.performance4{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance4.png');
+  }
+  .content01{
+    .table tbody tr:last-child{
+      font-weight: bold;
+    }
+    .table-label{line-height: 1.4;}
+    .sub-wrap .header-wrap + .comment-3{
+      text-align: right;
+      margin-bottom: 8px;
+    }
+  }
+  .content04{
+    .sub-wrap .img-wrap{
+      margin-top: 18px;
+    }
+  }
+  .content05{
+    .text-wrap{
+      .text{
+        color: #4d4d4d;
+        &:last-child{
+          margin-top: 8px;
+        }
+      }
+      .comment-3{
+        margin-top: 4px;
+        line-height: 1.4;
+        color: #757575;
+      }
+    }
+  }
+}
+
+.performance5{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance5.png');
+  }
+  .content03{
+    .list-wrap.circle-num{
+      margin-top: 0;
+      margin-bottom: 10px;
+      .title{
+        color: $grey-26;
+      }
+      dd{color: $grey-66;}
+      .comment-3{
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+    .content04{
+      .list-wrap.circle-num{
+        margin-bottom: 0;
+        margin-top: 0;
+        &.type02{
+          padding-bottom: 8px;
+          dd{color: $grey-66;}
+        }
+        &+.list-wrap.circle-num{
+          padding-top: 0;
+          dd{color: $grey-26;}
+          span{
+            font-size: 14px;
+            color: $grey-66;
+          }
+        }
+    }
+  }
+}
+
+.performance6{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance6.png');
+  }
+  .content02{
+    .flex-wrap .title{line-height: 1.4;}
+  }
+  .img-wrap .comment-3{margin-top: 10px;}
+}
+
+.performance7{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance7.png');
+  }
+  .content01{
+    .list-wrap.circle-num{
+      margin-top: 0;
+      dl dd{
+        font-size: 16px;
+        color: $grey-66;
+      }
+    }
+  }
+  .content03{
+    .header-wrap + .comment-3{
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .table td{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .img-wrap{
+        margin-top: 0;
+          img{
+            width: auto;
+          }
+      }
+    } 
+  }
+  .content04{
+    .list-wrap.circle{
+      dl dd{
+        margin-top: 8px;
+        font-size: 14px;
+        color: $grey-4d;
+      }
+      dl dd.none{
+        margin-top: 4px;
+        padding-left: 0;
+        font-size: 14px;
+        color: #757575;
+        &::before{
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+.performance8{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance8.png');
+  }
+  .img-wrap .comment-3{margin-top: 10px;}
+  .content03{
+    .header-wrap .text + .text{margin-top: 5px;}
+  }
+  .content04{
+    .table{
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+  .content05{
+    .img-wrap{
+      .list-wrap{
+        margin-top: 0;
+        margin-bottom: 0;
+        &.type02{
+          padding-bottom: 8px;
+          dl dd{color: $grey-66;}
+        }
+        &+.list-wrap.circle{
+          padding-top: 0;
+          dd{
+            font-size: 14px;
+            color: #4d4d4d;
+          }
+        }
+      }
+    }
+  }
+  .content06{
+    .list-wrap.bar{
+      dd{
+        font-size: 14px;
+        color: $grey-4d;
+      } 
+      dd.none{
+        padding-left: 0;
+        &::before{
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  .img-wrap .comment-3{
+    line-height: 1.6;
+  }
+}
+
+.performance9{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance9.png');
+  }
+  .content01{
+    .sub-wrap{
+      margin-top: 15px;
+      .table .comment-3{
+        font-size: 12px;
+      }
+      .table-label{
+        margin-bottom: 10px;
+        text-align: right;
+      }
+    }
+  }
+  .content02{
+    .img-wrap{
+      .list-wrap{
+        margin-top: 0;
+        margin-bottom: 10px;
+        dl dd{color: $grey-66;}
+      }
+      .comment-3{margin-top: 10px;}
+    } 
+  }
+  .content03, .content04{
+    .bg-gray .title{
+      line-height: 1.4;
+    }
+    .flex-wrap + .flex-wrap{
+      margin-top: 40px;
+      .flex{
+        flex: 0 auto;
+        width: 531px;
+      }
+    }
+  }
+}
+
+.performance10{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_performance10.png');
+  }
+  .content01{
+    .header-wrap .list-wrap{
+      margin-top: 8px;
+    }
+    .img-wrap +.list-wrap{
+      margin-top: 0;
+      dl dd{color: $grey-66;}
+    }
+  }
+  .content04{
+    .table{
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+}

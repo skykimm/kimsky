@@ -1,0 +1,33 @@
+/******************************************
+# G70 Common style
+# DATE   : 2021.10.28
+# AUTHOR : skykim
+# DEVICE : mobile
+******************************************/
+@import url("reset.css");
+@import url("lib/swiper.min.css");
+@import "common/mixin";
+
+@import "GV60/mobile/utilities"; // mobile component
+
+// ########################################################
+// layout 공통 SCSS (layout)
+// ########################################################
+@import "common/layout/header_mobile";
+@import "common/layout/footer_mobile";
+@import "GV70/mobile/layout/container";
+@import "GV70/mobile/layout/visual";
+@import "GV70/mobile/layout/mypage";
+@import "GV70/mobile/layout/search";
+@import "GV70/mobile/layout/sitemap";
+@import "GV70/mobile/layout/tipNstory";
+
+// ########################################################
+// Page 공통 SCSS (layout)
+// ########################################################
+@import "GV60/mobile/page_gv60/introduction";
+@import "GV60/mobile/page_gv60/design";
+@import "GV60/mobile/page_gv60/performance";
+@import "GV60/mobile/page_gv60/newtech";
+@import "GV60/mobile/page_gv60/convenience";
+@import "GV60/mobile/page_gv60/appendix";

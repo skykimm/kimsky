@@ -1,0 +1,35 @@
+//************************************
+//# Animation
+//************************************
+
+// tip 버튼 화살표 애니메이션
+@keyframes tiparrow {
+  0% {
+    right:10px;
+  }
+  100% {
+    right:14px;
+  }
+}
+// visual & cover 하단 화살표 애니메이션
+@keyframes visualsubarrow {
+  0% {
+    bottom:50px;
+  }
+  100% {
+    bottom:55px;
+  }
+}
+
+// quiz scroll indicator
+@keyframes scrollIndicator{
+  0%{
+    top: 15px
+  }
+  50%{
+    top: 25px;
+  }
+  100%{
+    top: 15px;
+  }
+}

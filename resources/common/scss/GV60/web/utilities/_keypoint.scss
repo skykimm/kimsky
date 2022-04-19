@@ -1,0 +1,95 @@
+.key-talking-point{
+  .tab-wrapper{
+    position: relative;
+    .swiper-button-next{
+      right: -30px;
+      &::after{
+        content: "";
+        display: inline-block;
+        border: solid $color-primary-gv;
+        border-width: 0 1px 1px 0;
+        padding: 4px;
+        transform: rotate(-45deg);
+      }
+    }
+    .swiper-button-prev{
+      left: -30px;
+      &::after{
+        content: "";
+        display: inline-block;
+        border: solid $color-primary-gv;
+        border-width: 0 1px 1px 0;
+        padding: 4px;
+        transform: rotate(135deg);
+      }
+    }
+    .tab-swiper{
+      overflow: hidden;
+      .tab-title{
+        display: inline-block;
+        position: relative;
+        height: 58px;
+        &.swiper-wrapper{
+          width: max-content !important;
+          overflow: hidden;
+          .swiper-slide{
+            width: 270px !important;
+            text-align: left;
+            padding-left: 2px;
+          }
+        }
+        .item{
+          margin: 0;
+          word-break: break-word;
+          cursor: pointer;
+          height: 58px;
+          padding: 0.9375rem 0;
+          font-size: 18px;
+          color: #757575;
+          -webkit-tap-highlight-color: transparent;
+          &.is-active{
+            color: #AD7B61;
+            font-weight: 600;
+            -webkit-tap-highlight-color: transparent;
+          }
+        }
+        .line{
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          border-bottom: 2px solid #e5e5e5;
+          .line-inner{
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 270px;
+            height: 2px;
+            transition: all .5s;
+            z-index: 1;
+            background-color:#AD7B61;
+          }
+        }
+      }
+    }
+  }
+  .tab-content{
+    .item-wrap{
+      padding-top: 0;
+      .title{
+        margin: 0 0 12px 0;
+        padding-top: 0;
+        font-family: 'genesisSans';
+        font-weight: 600;
+        line-height: 1.1;
+        font-size: 28px;
+        color: #000;
+        text-align: left;
+        letter-spacing: inherit;
+      }
+    } 
+  }
+}

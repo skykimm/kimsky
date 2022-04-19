@@ -1,0 +1,144 @@
+/* Dropdown */
+.dropdown-group {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: $grey-14;
+  font-size: 16px;
+  cursor: pointer;
+    /* title */
+  .title {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+    outline: none;
+    @include fontBody();
+    text-align: left;
+    color: $white;;
+    cursor: pointer;
+    @include after() {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      background-image: url('../img/ico_arrow_light.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 16px auto;
+      width: 24px;
+      height: 24px;
+      transition: .3s;
+      transform: translateY(-50%);
+    }
+  }
+  /* Dropdown list-wrap */
+  .dropdown-box {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: $grey-14;
+    border-top: 1px solid $black;
+    .item{
+      position: relative;
+      padding: 20px;
+      min-height: 56px;
+      text-align: left;
+      a{
+        display: block;
+        color: $grey-6f;
+      }
+      &:hover{
+        background-color: $grey-32;
+      }
+      @include isStatus('active'){
+        a{
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  @include isStatus('open'){
+    .title {
+        @include after(){
+          -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    .dropdown-box{
+      display: block;
+    }
+  }
+  
+}
+
+.dropdown-group.lang{
+  width: 100px;
+  .title{
+    padding: 8px;
+    font-size: 15px;
+    @include after{
+      background: none;
+      width: 0;
+      height: 0;
+      border-left: 4px solid $transparent;
+      border-right: 4px solid $transparent;
+      border-top: 6px solid $white;
+    }
+  }
+  .dropdown-box{
+    bottom: 56px;
+  }
+  @include isStatus('open'){
+    .dropdown-box{
+      position: absolute;
+      bottom: 56px;
+    }
+  }
+}
+
+.dropdown-group.white{
+  background-color: $white;
+  .title{
+    color:$grey-14;
+    @include after(){
+      background-image: url('../img/ico_dropdown_19.png');
+    }
+  }
+  .dropdown-box{
+    background-color: $white;
+    border-top:0 none;
+    .item{
+      a{
+        color: $black;
+      }
+      &:hover{
+        background-color: $grey-ed;
+      }
+    }
+  }
+}
+
+.dropdown-group.grey{
+  background-color: $grey-f4;
+  .title{
+    color:$grey-14;
+  }
+  .dropdown-box{
+    background-color: $grey-fa;
+    border-top:0 none;
+    .item{
+      a{
+        color: $grey-db;
+      }
+      &:hover{
+        background-color: $grey-ed;
+      }
+      @include isStatus('active'){
+        a{
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

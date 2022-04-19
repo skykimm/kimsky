@@ -1,0 +1,220 @@
+//***********************************************************
+//# name : GV60 design
+//# desc : design
+//***********************************************************
+
+.design{ // intro
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_cover_design.png');
+  }
+}
+
+.design2{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design2.png');
+  }
+  .content01{
+    .sub-content01{
+      margin-top: 40px;
+      .flex-wrap{
+        .flex{
+          display: block;
+          font-size: 0;
+          .img-wrap{
+            display: inline-block;
+            margin-top: 0;
+            width: 256px;
+            .title{
+              color: $grey-4d;
+              line-height: 1.4;
+            }
+          }
+          .img-wrap+.img-wrap{
+            margin-left: 18px;
+          }
+        }
+      }
+    } 
+    .sub-content02{
+      .flex-wrap .text-wrap .title{
+        color: $grey-4d;
+      }
+    }
+  }
+  .content02{
+    .flex .bg-gray{
+      min-height: 143px;
+    }
+    .img-wrap .comment-3{
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+  }
+  .badge-txt-new{
+    position: absolute;
+  }
+  .flex-wrap .flex .img-wrap{
+    margin-top: 0;
+  }
+  .sub-wrap .header-wrap .text{
+    color: $grey-66;
+  }
+}
+
+.design3{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design3.png');
+  }
+  .content02{
+    .list-wrap{
+      dd{
+        color: #4d4d4d;
+        font-size: 14px;
+      }
+      margin-bottom: 10px;
+    } 
+  }
+  .content03 .flex-wrap{
+    margin-bottom: 10px;
+  }
+  .comment-3{
+    color: #757575;
+    line-height: 1.4;
+  }
+}
+
+.design4{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design4.png');
+  }
+  .content01{
+    .header-wrap .text{
+      color: $grey-66;
+    }
+    .flex-wrap .text-wrap .title{
+      color: $grey-4d;
+    }
+  }
+  .content02{
+    .flex-wrap + .flex-wrap{
+      margin-top: 40px;
+      width: calc(100% / 3);
+    }
+  }
+}
+.design5{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design5.png');
+  }
+  .content01{
+    dl dd{
+      font-size: 14px;
+      color: #4d4d4d;
+      .list-wrap.bar dl dd{color: #757575;}
+    }
+  }
+  .content02{
+    .flex .bg-gray{
+      +.comment-3{
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+      }
+    }
+    .badge-txt-new{
+      position: absolute;
+    }
+  }
+}
+
+.design6{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design6.png');
+  }
+  .content01{
+    .comment-3{
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .table{
+      .color{
+        color: #996449;
+      }
+      .img-wrap{
+        margin-top: 10px;
+      }
+      tr{
+        &:nth-child(2){
+          .img-wrap{
+            margin-top: 0;
+          }
+        }
+        td .img-wrap{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        td.line-last{
+          padding-right: 5px;
+        }
+      }
+    }
+    .sub-wrap{
+      .flex {
+        .text-wrap{
+          padding-bottom: 0;
+          .title, .text{
+            text-align: left;
+          }
+        } 
+        dl{
+          dt{
+            font-family: 'genesisSans';
+            color: $grey-26;
+          }
+          dd{
+            text-align: left;
+            color: $grey-66;
+          }
+        }
+        &:nth-child(2){
+          .type01{
+            padding-top: 12px;
+            .title{
+              color: $grey-4d;
+            }
+            dd{
+              color: $grey-66;
+            }
+          }
+        }
+        &:last-child{
+          .text-wrap .comment-3{
+            margin-top: 6px;
+            text-align: left;
+            color: #999;
+          }
+        } 
+      }
+    }
+  }
+}
+
+.design7{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_design7.png');
+  }
+  .sub-wrap{
+    .comment-3{
+      text-align: right;
+      margin-bottom: 10px;
+    }
+  }
+  .color{
+    color: #996449;
+  }
+  .content02{
+    .img-wrap +.sub-wrap{
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+%setWidth {
+  width: 80%;
+  margin: 0 auto;
+}
+.popup-wrap{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: $white;
+  width: 840px;
+  height: 100%;
+  max-height: 760px;
+  padding: 75px 0;
+  overflow: auto;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  &.is-show{
+    display: block;
+  }
+  .popup-header{
+    @extend %setWidth;
+    .title{
+      @include fontHead();
+      margin: 0 0 50px;
+      color: $black;
+      font-size: 30px;
+      word-break: keep-all;
+    }
+    .btn-close{
+      top: 25px;
+      right:25px;
+    }
+  }
+  .popup-content{
+    @extend %setWidth;
+    color: $grey-14;
+    word-break: keep-all;
+    .text-wrap{
+      .title{
+        @include fontHead(100);
+        margin: 0 0 25px;
+        color: $color-primary-gv;
+        font-size: 22px;
+      }
+      .text{
+        margin: 0 0 50px;
+        color: $grey-6f;
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 1.4;
+        opacity: .9;
+        word-break: keep-all;
+      }
+    }
+    div:last-of-type p:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+.popup-tns,
+.popup-mypage{
+  padding: 0;
+  max-height: 910px;
+  flex-direction: column;
+  &.is-show{
+    display: flex;
+  }
+  .popup-header{
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    background: #f8f8fb;
+    width: 100%;
+    min-height: 143px;
+    padding: 44px 58px 24px;
+    z-index: 1;
+    .title{
+      line-height: 38px;
+      margin: 0;
+      overflow: hidden;
+    }
+    .count{
+      position: absolute;
+      bottom: 24px;
+      right: 94px;
+      @include fontBody();
+      font-size: 16px;
+      color: $grey-75;
+    }
+    .progress{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: $grey-db;
+      height: 2px;
+      .is-active{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        background: $color-primary-gv;
+        transition: .3s width;
+      }
+    }
+  }
+  .popup-content{
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 36px 58px 0;
+    overflow-y: auto;
+  }
+  .popup-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0 0 auto;
+    background: $white;
+    width: 100%;
+    height: 109px;
+    padding: 28px 78px 44px;
+    z-index: 1;
+    .btn .ico{
+      position: relative;
+      margin: -2px 5px 0;
+    }
+    .info-txt{
+      display: none;
+      flex: 1;
+      @include fontBody();
+      font-size: 14px;
+      color: $color-primary-gv;
+      vertical-align: middle;
+      &:before{
+        content: '※';
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+      &.is-show{
+        display: block
+      }
+    }
+  }
+}

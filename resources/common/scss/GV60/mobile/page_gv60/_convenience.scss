@@ -1,0 +1,115 @@
+//***********************************************************
+//# name : GV60 convenience
+//# desc : convenience
+//***********************************************************
+
+.list-wrap.type00.bg-gray dl dd{
+  padding-left: 20px;
+}
+
+.convenience{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_cover_convenience.png');
+  }
+}
+
+.convenience2{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_convenience2.png');
+  }
+  .comment-3{
+    color: #C0C0C0;
+    position: absolute;
+    bottom: 35px;
+    padding: 0 9.3333vw;
+  }
+}
+
+.convenience3{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_convenience3.png');
+  }
+  .content01{
+    &>.img-wrap + .img-wrap{
+      margin-top: 20px;
+    }
+    [class^='sub-content']{
+      margin-top: 40px;
+      .title{
+        margin-bottom: 12px;
+        font-family: 'genesisans';
+        font-size: 16px;
+        color: #262626;
+      }
+    }
+    .sub-content-01{
+      .list-wrap dl dd{
+        font-size: 14px;
+        color: $grey-4d;
+        line-height: 1.5;
+      }
+    }
+  }
+  .content04{
+    .list-wrap dl dd{
+      color: $grey-4d;
+    }
+    .sub-wrap{
+      .comment-3{margin-top: 4px;}
+    }
+  }
+}
+
+.convenience4{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_convenience4.png');
+  }
+  .content02{
+    .list-wrap{
+      margin-top: 13px;
+      dl dd{color: $grey-66;}
+    } 
+  }
+  .content03{
+    .sub-wrap .title{
+      font-size: 22px;
+    }
+  }
+  .content05{
+    .slide-wrap .comment-3{
+      margin-top: 8px;
+    }
+    [class^='sub-content']{
+      .title{
+        margin-bottom: 12px;
+        font-family: 'genesisans';
+        font-size: 16px;
+        color: #262626;
+      }
+    }
+    .sub-content-02{margin-top: 40px;}
+    .list-wrap.bg-gray{margin-top: 0;}
+  }
+}
+
+.convenience5{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_convenience5.png');
+  }
+  .content01{
+    .table{
+      td img{
+        width: 22px;
+      }
+    }
+  }
+  .content02{
+    .list-wrap dl dd{color: $grey-66;}
+  }
+}
+
+.convenience6{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_convenience6.png');
+  }
+}

@@ -1,0 +1,156 @@
+//***********************************************************
+//# name : GV60 convenience
+//# desc : convenience
+//***********************************************************
+
+.convenience{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_cover_convenience.png');
+  }
+}
+
+.convenience2{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_convenience2.png');
+    .title .comment-3{
+      position: absolute;
+      left: 42px;
+      bottom: 24px;
+      font-size: 12px;
+      color: #c0c0c0;
+    }
+  }
+  .content01{
+    .flex-wrap + .flex-wrap{
+      margin-top: 20px;
+      .flex{
+        flex: 0 auto;
+        width: 531px;
+      }
+    }
+  }
+  .content02,.content04{
+    .sub-wrap{
+      margin-top: 40px;
+    }
+  }
+  .content06,.content08,.content13{
+    .flex-wrap + .flex-wrap{
+      margin-top: 20px;
+    }
+  }
+  .content08,.content13{
+    .flex-wrap + .flex-wrap{
+      .flex{
+        flex: 0 auto;
+        width: 531px;
+      }
+    }
+  }
+  .content14{
+    .table{
+      margin-top: 40px;
+      thead th:nth-of-type(2){
+        padding-left: 20px;
+        text-align: left;
+      }
+      tbody tr td {
+        padding-left: 20px;
+        text-align: left;
+        &.center{
+          text-align: center;
+        }
+      }
+    } 
+  }
+}
+
+.convenience3{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_convenience3.png');
+  }
+  .content01{
+    .header-wrap +.img-wrap +.img-wrap{margin-top: 40px;}
+    [class^='sub-content']{
+      margin-top: 40px;
+      .title{
+        font-family: 'genesisans';
+        font-size: 18px;
+        color: #262626;
+      }
+    }
+    .sub-content-01{
+      .list-wrap dl dd{
+        font-size: 14px;
+        color: $grey-4d;
+      }
+    }
+    .sub-content-02{
+      .flex-wrap{
+        margin-top: 18px;
+      }
+    }
+  }
+  .content04{
+    .list-wrap dl dd{
+      font-size: 14px;
+      color: $grey-4d;
+    }
+  }
+}
+
+.convenience4{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_convenience4.png');
+  }
+  .content02{
+    .list-wrap{
+      margin-top: 0;
+    }
+  }
+  .content03{
+    .flex-wrap +.img-wrap{
+      margin-top: 0;
+    }
+  }
+  .content05{
+    .comment-3{
+      margin-top: 10px;
+    }
+    [class^='sub-content']{
+      margin-top: 30px;
+      .title{
+        font-family: 'genesisans';
+        font-size: 18px;
+        color: #262626;
+      }
+      .list-wrap{
+        margin-top: 0;
+      }
+      .img-wrap{margin-top: 18px;}
+    }
+    .sub-content-02{margin-top: 40px;}
+  }
+}
+
+.convenience5{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_convenience5.png');
+  }
+  .content01{
+    .header-wrap .title{line-height: 1.3;}
+    .table{margin-top: 40px;}
+  } 
+  .content02{
+    .list-wrap{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.convenience6{
+  .visual-wrap {
+    background-image: url('../img/gv60/web/bg_visual_convenience6.png');
+  }
+}

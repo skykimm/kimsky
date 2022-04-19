@@ -1,0 +1,25 @@
+/******************************************
+#  Mobile PAGE STYLE - KOR
+#  DATE   : 2022.03.10
+#  AUTHOR : skykim
+#  DEVICE : Mobile KOR
+******************************************/
+
+// GV60의 공통 레이아웃
+@import url('../../../../common/css/mobile_gv60.css');
+
+// Custom Content for lang
+@import 'page/main';
+@import 'page/design';
+@import 'page/performance';
+@import 'page/newtech';
+@import 'page/convenience';
+@import 'page/appendix';
+@import 'page/trim';
+
+.point-text {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px !important;
+    color: #996449 !important;
+}

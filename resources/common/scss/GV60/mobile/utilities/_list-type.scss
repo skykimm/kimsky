@@ -1,0 +1,127 @@
+
+.list-wrap{
+  color: $grey-26;
+  dl{
+    margin:0 auto;
+    line-height: 1.4;
+    .title{
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: $grey-26;
+    }
+    dd + dd{
+      margin-top: 7px;
+    }
+    &>dd{
+      position: relative;
+      margin-bottom: 7px;
+      padding-left: 10px;
+      font-size: 14px;
+      word-break: keep-all;
+      @include before{
+        @include absolute($left: 0);
+      }
+      &>.list-wrap{
+        margin: 3px 0;
+        dl{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.list-wrap{
+  %icon{
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    @include before{
+      background-color: $grey-14;
+    }
+  }
+  %text{
+    padding-left: 15px;
+  }
+  &.bar>dl>dd:before{
+    top: 10px;
+    width: 4px;
+    height: 1px;
+    background-color: $grey-14;
+  }
+  &.square>dl>dd:before{
+    @extend %icon;
+  }
+  &.circle>dl>dd{
+    @extend %text;
+    padding-left: 10px;
+    &:before{
+      content:'•';
+    }
+  }
+  &.ref>dl>dd{
+    @extend %text;
+    &:before{
+      content:'※';
+    }
+  }
+  &.star>dl>dd{
+    @extend %text;
+    &:before{
+      content:'*';
+      padding-top: 3px;
+    }
+  }
+  &.circle-num>dl>dd{
+    @extend %text;
+    padding-left: 20px;
+    &:before{
+      content: attr(data-num);
+    }
+  }
+  &.num>dl{
+    dd{
+      display: list-item;
+      margin-left: 16px;
+      padding: 0;
+      list-style-type: decimal;
+      &:before{
+        content: none;
+      }
+    }
+  }
+}
+
+// dd:before primary color
+.list-wrap.type00.circle-num{
+  dl{
+    dd:before{
+      color: $color-primary-gv;
+    }
+  }
+}
+.list-wrap.type00.bg-gray{
+  dl{
+    display: block;
+    dd{
+      color: $grey-66;
+      margin-bottom: 2px;
+      padding-left: 14px;
+      font-size: 0.875rem;
+    }
+  }
+}
+// dd:before remove position absolute
+.list-wrap.type01{
+  dl{
+    dd{
+      padding-left: 0;
+      padding-right: 0;
+      &:before{
+        display:inline-block;
+        position: relative;
+        margin-right: 3px;
+      }
+    }
+  }
+}

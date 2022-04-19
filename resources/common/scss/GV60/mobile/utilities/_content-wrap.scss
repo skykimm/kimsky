@@ -1,0 +1,153 @@
+// G70
+.header-wrap{
+  margin-bottom: 22px;
+  color: $grey-14;
+  .title{
+    margin: 0 0 10px 0;
+    @include fontBody(600);
+    line-height: 1.7rem;
+    font-size: 1.375rem;
+    word-break: keep-all;
+    color: $black;
+    .comment-1{
+      display: block;
+      margin-top: 4px;
+      line-height: 1.3125rem;
+      color: $black;
+    }
+    .badge-txt-new{
+      font-size: 12px;
+    }
+  }
+  .sub-title{
+    margin: 0 0 12px 0;
+    @include fontHead();
+    font-size: 1rem;
+  }
+  .text{
+    line-height: 1.3125rem;
+    font-size: 15px;
+    word-break: keep-all;
+    color: $grey-4d;
+  }
+  .list-wrap{
+    margin:10px 0 0;
+    >dl{
+      display: block;
+      dd{
+        color: $grey-4d;
+        font-size: 15px;
+      }
+    }
+  }
+  .comment-3{
+    margin-top: 6px;
+    line-height: 1.125rem;
+  }
+}
+// sub head
+.sub-wrap{
+  margin-top: 40px;
+  .header-wrap {
+    margin-bottom: 0;
+    .title{
+      margin-bottom: 0;
+      @include fontBody(600);
+      font-size: 1.125rem;
+      line-height: 1.7rem;
+      color: $grey-26;
+      &:only-child{
+        margin-bottom: 14px;
+      }
+    }
+    .heading-4{
+      margin:12px 0 15px;
+    }
+    .text{
+      margin: 10px 0 18px;
+      color: $grey-66;
+    }
+  }
+}
+.text-wrap{
+  .title{
+    @include fontBody();
+    margin: 0 0 12px;
+    line-height: 1.1;
+    font-size: 22px;
+    color: $grey-14;
+    letter-spacing: 0;
+    word-break: keep-all;
+    .sub-title{
+      font-size: 14px;
+      color: $grey-6f;
+      line-height: 1.4;
+    }
+  }
+  .text{
+    margin: 0 0 17px;
+    line-height: 1.4;
+    font-size: 14px;
+    color: $grey-66;
+    word-break: keep-all;
+  }
+}
+
+.img-wrap{
+  position: relative;
+  font-size:0;
+  img{
+    width: 100%;
+  }
+  .badge{
+    position: absolute;
+    left: 0;
+    margin: 0;
+  }
+  .comment-3{
+    margin: 13px $l-margin-gv 0 !important;
+  }
+  .text-wrap{
+    margin-top: 16px;
+    text-align: center;
+    .title{
+      margin-bottom: 5px;
+      line-height: inherit;
+      font-size: 0.9375rem;
+      color: $grey-26;
+    }
+  }
+  .list-wrap{
+    margin: 0;
+  }
+}
+.img-wrap.l-full+.img-wrap.l-full{
+  margin-top: -1px;
+}
+
+.list-wrap{
+  margin: 16px 0;
+  &.bg-gray .title{
+    text-align: inherit;
+  }
+}
+
+.btn-wrap{
+  margin: 20px 0;
+}
+
+.bg-gray{
+  background-color: $grey-f8;
+  padding: 16px 15px 20px;
+  margin-bottom: 16px;
+  .title{
+    text-align: center;
+  }
+  .text{
+    margin: 0;
+    line-height: 20px;
+  }
+  .comment-3{
+    margin-top: 14px;
+  }
+}

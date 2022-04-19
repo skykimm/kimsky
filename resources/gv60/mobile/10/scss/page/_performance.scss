@@ -1,0 +1,32 @@
+.performance4{
+    .visual-wrap {
+        background-image: url("../img/common/bg_visual_performance4.png");
+    }
+    .content01{
+        .list-wrap{
+            dl dd{
+                color: #666;
+            }
+        }
+    }
+    .content02{
+        .text-wrap{
+            margin-top: 16px;
+            .title{font-size: 15px; color: #4d4d4d; line-height: 1.4;}
+        }
+    }
+}
+.performance5{
+    .content04{
+        .list-wrap.circle-num:last-child{
+            dl dd{
+                padding-left: 0;
+            }
+        }
+    }
+}
+.performance9{
+    .content04 .text-wrap.bg-gray {
+        min-height: 98px;
+    }
+} 

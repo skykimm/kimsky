@@ -1,0 +1,197 @@
+//***********************************************************
+//# name : GV60 newtech
+//# desc : newtech
+//***********************************************************
+
+.newtech{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_cover_newtech.png');
+  }
+  .cover .title-wrap .content-text {
+    bottom: 110px;
+  }
+}
+.newtech2{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_newtech2.png');
+  }
+  .content01{
+    >.header-wrap .list-wrap dl dd{
+      color: #757575;
+    }
+    .sub-wrap .sub-content-01{
+      .img-wrap + .img-wrap{
+        margin-top: 70px;
+      }
+      .arrow{
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        width: 30px;
+        height: auto;
+        margin-left: -20px;
+      }
+    }
+  }
+  .content02{
+    .sub-wrap .list-wrap{
+      margin-top: 0;
+      dl dd{color: $grey-4d;}
+    }
+  }
+  .content03{
+    .text-wrap{margin-top: 0;}
+    [class^='sub-content']{
+      position: relative;
+      .title{
+        margin-bottom: 12px;
+      }
+      .arrow{
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: auto;
+      }
+      +[class^='sub-content']{margin-top: 70px;}
+    }
+    .sub-content-02,.sub-content-04{
+      .slide-wrap .text-wrap.bg-gray{
+        min-height: 100px;
+      }
+    }
+  }
+  .content04{
+    .list-wrap{
+      dl dd{color: $grey-4d;}
+      .comment-3{margin-top: 4px;}
+    } 
+    .table-wrap{
+      margin-top: 40px;
+      .header-wrap{
+        position: relative;
+        .comment-3{
+          position: absolute;
+          top: 55px;
+          right: 0;
+          text-align: right;
+          font-size: 11px;
+          line-height: 1.4;
+        }
+      }
+      .img-wrap{
+        margin-top: 20px;
+        &+.comment-3{
+          margin-top: 13px;
+        }
+      }
+      .table6, .table7{
+        margin-top: 40px !important;
+      }
+      .table-label{
+        font-size: 15px;
+        color: #000000;
+      }
+    }
+  }
+  .content05{
+    .text-wrap.bg-gray{
+      min-height: 160px;
+    }
+  }
+  .content06{
+    .list-wrap{
+      dl dd{color: $grey-4d;}
+      .comment-3{margin-top: 4px;}
+    }
+  }
+}
+
+.newtech3{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_newtech3.png');
+  }
+  .content01{
+    .text-wrap{
+      padding: 13px 0;
+      margin-bottom: 0;
+    }
+    .list-wrap dl dd{
+      font-size: 13px;
+      color: $grey-66;
+    }
+    .list-wrap.bg-gray{
+      min-height: 335px;
+    }
+  }
+  .content02{
+    .img-wrap + .img-wrap{
+      margin-top: 40px;
+    }
+  }
+  .content04{
+    .comment-3 +.comment-3{
+      margin-top: 0;
+    }
+  }
+}
+
+.newtech4{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_newtech4.png');
+  }
+  .content01 .list-wrap dl dd{color: $grey-4d;}
+  .content02{
+    .text-wrap.bg-gray{min-height: 180px;}
+  }
+  .content03{
+    .text-wrap.bg-gray{min-height: 125px;}
+    .header-wrap img{
+      width: 25px;
+    }
+    [class^='point']{
+      display: inline-block;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: #fff;
+    }
+    .point-a{
+      background-color: #707070;
+    }
+    .point-b{
+      background-color: #996449;
+    }
+    .sub-wrap{
+      .header-wrap .list-wrap dl dd{color: $grey-66;}
+      .list-wrap.bg-gray{
+        margin-top: 0;
+        dl dd{
+          font-size: 14px;
+          color: $grey-66;
+        }
+      }
+      .comment-3{
+        margin-bottom: 8px;
+      }
+      .slide-wrap{margin-top: 14px;}
+    } 
+  }
+}
+
+.newtech5{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_newtech5.png');
+  }
+  .content01{
+    .list-wrap dl dd::before{content: '';}
+    .sub-wrap{
+      .img-wrap{
+        margin-top: 14px;
+        &+ .img-wrap{margin-top: 40px;}
+      }
+    }
+  }
+}

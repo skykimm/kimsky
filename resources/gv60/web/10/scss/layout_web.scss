@@ -1,0 +1,26 @@
+/******************************************
+#  Web PAGE STYLE - KOR
+#  DATE   : 2022.03.15
+#  AUTHOR : skykim
+#  DEVICE : Web KOR
+******************************************/
+
+// GV60의 공통 레이아웃
+@import url('../../../../common/css/web_gv60.css');
+
+
+// 언어별 커스텀 레이아웃
+@import 'page/main';
+@import 'page/design';
+@import 'page/performance';
+@import 'page/newtech';
+@import 'page/convenience';
+@import 'page/appendix';
+@import 'page/trim';
+
+.point-text{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #996449 ;
+}

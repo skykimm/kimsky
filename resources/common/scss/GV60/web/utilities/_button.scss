@@ -1,0 +1,135 @@
+// Base
+.btn{
+  position: relative;
+  display: inline-block;
+  background-color: $transparent;
+  border: 1px solid $transparent;
+  padding: 8px 12px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus,
+  &.focus {
+    outline: none;  
+  }
+}
+
+@each $color, $value in $basic-colors {
+  .btn{
+    // btn outline
+    &.#{$color}-outline {
+      color: $color-primary-gv;
+      border-color: $color-primary-gv;
+      .ico{
+        border-color: $color-primary-gv;
+      }
+    }
+    // btn color
+    &.#{$color} {
+      background-color: #000;
+      color: $white;
+      &:disabled{
+        background-color: #b1b1b1;
+      }
+      .ico{
+        border-color: $white;
+      }
+    }
+  }
+}
+
+.btn-tip{
+  border: 1px solid $color-primary-gv;
+  height: 34px;
+  line-height: 30px;
+  padding:0 14px;
+  color: $color-primary-gv;
+  .ico{
+    border-color: $color-primary-gv;
+  }
+}
+
+.btn-close{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  i{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//newtech cover
+.newtech .cover .point-btn{
+  padding: 0 80px;
+  margin-left: -650px;
+}
+
+.point-btn{
+  padding: 0 40px;
+  position: absolute;
+  left: 40%;
+  bottom: 15vh;
+  margin-left: -480px;
+  width: 100%;
+  z-index: 1;
+  .youtube-btn{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 17px 30px;
+    margin-bottom: 18px;
+    width: 240px;
+    height: 56px;
+    background: rgba($color: #fff, $alpha: 0.9);
+    transition: all .3s;
+    .youtube-text{
+      position: relative;
+      color: #000;
+      font-size: 18px;
+    }
+    &:before{
+      content: '';
+      display: block;
+      clear: both;
+      position: absolute;
+      left: 0; 
+      bottom: 0; 
+      width: 100%; 
+      height: 0; 
+      color: #000;
+      background-color: #000;
+      transition: all 0.5s;
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+      position: absolute;
+      right: 30px;
+      bottom: 22px;
+      transform: rotate(-45deg);
+      width: 9px;
+      height: 9px;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+    }
+    &:hover{
+      .youtube-text{
+        color: #fff;
+      }
+      &::after{border-color: #fff;}
+      &::before{
+        height: 100%;
+      }
+    }
+  }
+}

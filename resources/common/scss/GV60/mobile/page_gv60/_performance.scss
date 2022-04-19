@@ -1,0 +1,248 @@
+//***********************************************************
+//# name : GV60 performance
+//# desc : performance
+//***********************************************************
+
+.performance{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_cover_performance.png');
+  }
+  .comment-3{
+    display: block;
+    margin-top: 10px;
+    line-height: 18px;
+    font-size: 14px;
+    color: $grey-6f;
+  }
+}
+
+.performance2{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance2.png');
+    .comment-3{
+      color: #C0C0C0;
+      position: absolute;
+      bottom: 35px;
+      padding: 0 9.3333vw;
+    }
+  }
+
+  }
+
+.performance3{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance3.png');
+  }
+  .content02{
+    .list-wrap dl dd{color: $grey-66;}
+  }
+}
+
+.performance4{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance4.png');
+  }
+  .content01{
+    .sub-wrap{
+      .table-label{
+        margin-bottom: 12px;
+        text-align: right;
+      }
+      .table tbody tr:last-child{
+        font-weight: bold;
+      }
+      .comment-3{
+        margin-top: 13px;
+      }
+    }
+  }
+  .content03{
+    .img-wrap + .img-wrap{
+      margin-top: 20px;
+    }
+  }
+  .content05{
+    .sub-wrap{
+      .comment-3{
+        margin-top: 4px;
+      }
+      .text{
+        margin-top: 8px;
+        color: $grey-4d;
+      }
+    }
+  }
+}
+
+.performance5{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance5.png');
+  }
+  .content01{
+    .table-label{
+      margin-top: 13px;
+    }
+  }
+  .content03{
+    .list-wrap{
+      margin-top: 0;
+      margin-bottom: 13px;
+      dl dd{
+        font-size: 12px;
+        color: $grey-66;
+      }
+      .comment-3{
+        margin-top: 4px;
+      }
+    }
+  }
+  .content04{
+    .list-wrap.circle-num{
+      margin-bottom: 0;
+      margin-top: 0;
+      &.type00{
+        margin-top: 0;
+        padding-bottom: 8px;
+      }
+        &+.list-wrap.circle-num{
+          padding-top: 0;
+          span{
+            font-size: 12px;
+            color: $grey-66;
+          }
+        }
+    }
+  } 
+}
+
+.performance6{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance6.png');
+  }
+}
+
+.performance7{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance7.png');
+  }
+  .content01{
+    .list-wrap dl dd{color: $grey-66;}
+  }
+  .content03{
+    .sub-wrap{
+      margin-top: 20px;
+      .comment-3{
+        margin-bottom: 4px;
+        text-align: right;
+      }
+    }
+  }
+  .content04{
+    .list-wrap.circle{
+      margin-top: 0;
+      dl dd{
+        font-size: 12px;
+        &:nth-child(5){
+          margin-top: 9px;
+        }
+      }
+      dl dd.none{
+        padding-left: 0;
+        font-size: 12px;
+        color: #757575;
+        &::before{
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+.performance8{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance8.png');
+  }
+  .content01{
+    .text-wrap.bg-gray{
+      min-height: 123px;
+    }
+  }
+  .content03{
+    .header-wrap .text + .text{
+      margin-top: 7px;
+    }
+  }
+  .content04 .table{margin-top: 20px;}
+  .content05{
+    .img-wrap{
+      .list-wrap{
+        margin-top: 0;
+        margin-bottom: 0;
+        &.type00{
+          margin-top: 0;
+          padding-bottom: 8px;
+        }
+        &+.list-wrap.circle{
+          padding-top: 0;
+          dd{
+            font-size: 14px;
+            color: #4d4d4d;
+          }
+        }
+      }
+    }
+  }
+  .content06{
+    .list-wrap dl dd{
+      color: $grey-4d;
+    }
+  }
+}
+
+.performance9{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance9.png');
+  }
+  .content01{
+    .table{
+      .comment-3{
+        display: block;
+        margin-top: 4px;
+        line-height: 1.2;
+      }
+    }
+    .table-label{
+      margin-bottom: 12px;
+      text-align: right;
+    }
+
+  }
+  .content02{
+    .list-wrap dl dd{color: $grey-4d;}
+  }
+  .content04{
+    .text-wrap.bg-gray{
+      min-height: 122px;
+    }
+  }
+}
+
+
+.performance10{
+  .visual-wrap {
+    background-image: url('../img/gv60/mobile/bg_visual_performance10.png');
+  }
+  .content01{
+    .list-wrap{
+      margin-top: 0;
+    }
+  }
+  .content04{
+    .table{margin-top: 20px;}
+  }
+  .content06{
+    .text-wrap{
+      min-height: 100px;
+    }
+  }
+}

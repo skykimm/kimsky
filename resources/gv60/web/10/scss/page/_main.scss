@@ -1,0 +1,76 @@
+.main.container{
+    .visual-main{
+        .visual-wrap {
+            background-image: url("../img/common/bg_introduction_1.png");
+        }
+    }
+    .ele1 .section1 {
+        padding-top: 130px;
+    }
+}
+
+.wrap.key-talking-point{
+    .content01,.content02,.content03,.content04{
+        margin-top: 60px;
+    }
+    .content01{
+        .sub-content-01{
+            .header-wrap .text{
+                margin-bottom: 24px;
+            }
+        }
+        .sub-content-04{
+            margin-top: 120px;
+        }
+        .sub-content-05{
+            margin-top: 40px;
+            .header-wrap .text{
+                margin-bottom: 24px;
+            }
+        }
+        .sub-content-06{
+            margin-top: 40px;
+        }
+    }
+    .content02{
+        .sub-content-03,.sub-content-05{
+            margin-top: 120px;
+        }
+        .sub-content-04{
+            margin-top: 40px;
+            .header-wrap .text{
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .content03{
+        .sub-content-02{
+            .header-wrap .text +.text{
+                margin-bottom: 24px;
+            }
+        }
+        .sub-content-04{
+            margin-top: 120px;
+        }
+    }
+    .content04{
+        .sub-content-03{
+            .header-wrap .text{
+                margin-bottom: 24px;
+            }
+        }
+        .sub-content-04{
+            margin-top: 40px;
+        }
+        .sub-content-05{
+            .header-wrap .text a{
+                text-decoration: underline;
+            }
+        }
+    }
+    .header-wrap{
+        .text +.text{
+            margin-top: -9px;
+        }
+    }
+}

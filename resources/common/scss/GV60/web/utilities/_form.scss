@@ -1,0 +1,98 @@
+/* input */
+input[type="text"],
+textarea{
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  height: 36px;
+  padding: 9px 14px;
+  color: $grey-a2;
+  background-color: transparent;
+  font-size: 16px;
+  box-sizing: border-box;
+  &:focus{
+    border-color: $black;
+  }
+  &::placeholder{
+    color: $grey-a2;
+  }
+}
+/* radio & checkbox */
+@mixin inputForm($type){
+  .#{$type}-group{
+    display: inline-flex;
+    align-content: center;
+    position: relative;
+    padding-left: 1.875rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      border: 0;
+      height: 0;
+      width: 0;
+      min-width: auto;
+      margin:0;
+      padding: 0;
+    }
+    label {
+      position: relative;
+      display: inline-flex;
+      align-content: center;
+      min-height: 1.375rem;
+      cursor: pointer;
+    }
+    .#{$type}{
+      position: absolute;
+      left: -30px;
+      width: 20px;
+      height: 20px;
+      background: $white;
+      border: 1px solid $grey-a2;
+      @if $type == 'rdo'{
+        border-radius: 50%; 
+      }
+      &:after{
+        content: "";
+        display: none;
+        position: absolute;
+        @if $type == 'chk'{
+          top: 0.125rem;
+          left: 0.375rem;
+          border: solid $black;
+          border-width: 0 0.125rem 0.125rem 0;
+          width: 0.3125rem;
+          height: 0.6875rem;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }@else if $type=='rdo'{
+          top: 5px;
+          left: 5px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: $white;
+        }
+      }
+    }
+    input:checked+label .#{$type}{
+      background-color: $color-primary-gv;
+      border-color: $color-primary-gv;
+    }
+    // input:checked+label .chk{
+    //   background-color: $white;
+    //   border-color: $color-primary-gv;
+    // }
+    input:checked+label .#{$type}:after{
+      display: block;
+    }
+  }
+}
+
+@include inputForm('chk');
+@include inputForm('rdo');

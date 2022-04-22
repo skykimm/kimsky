@@ -1,0 +1,26 @@
+@import 'mixin';
+
+//************************************
+//# RTL
+//************************************
+@mixin rtl($left: auto,  $text: false){
+  @if($text == true){
+    text-align: right;
+  }
+  @if ($left != auto){
+    left: $left;
+    right: auto;
+  }
+}
+
+// slide Width
+@mixin slideIdx($index: 3){
+  flex: none;
+  width: calc(100%/#{$index} - 12px);
+  &:nth-of-type(#{$index}n+1){
+    margin-right: 0;
+  }
+  &:nth-of-type(#{$index}n){
+    margin-left: 0;
+  }
+}

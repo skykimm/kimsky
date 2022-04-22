@@ -1,0 +1,27 @@
+
+/*Default set*/
+.wrap{
+  padding-top: 112px;
+}
+.wrap.search-page{
+  padding-top: 56px;
+}
+.container{
+  position: relative;
+  background-color: $white;
+  width: 100%;
+  height: auto;
+  padding-top: 32px;
+  padding-bottom: 80px;
+}
+
+.content-wrap{
+  width: $l-width-gv;
+  margin: 0 auto;
+  &+&{
+    margin-top: 80px;
+  }
+  .l-full{
+    margin:0 $l-margin-gv*-1;
+  }
+}

@@ -1,0 +1,61 @@
+// #####################################################
+// footer
+// #####################################################
+/* prev/next button */
+footer{
+  position: relative;
+  height: 62px;
+  z-index: 10;
+  .btn-group{
+    position: relative;
+    background: #141414;
+    padding:0 10px;
+    width: 100%;
+    height:64px;
+    .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      font-size: 1rem;
+      color: $white;
+      box-sizing: border-box;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      &:disabled{
+        color: $white;
+        opacity: .3;
+        cursor: default;
+      }
+      i{
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url('../img/ico_arrow_light.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 0.75rem auto;
+      }
+    }
+  }
+}
+// icon
+
+.ico-prev,
+.btn:disabled:hover .ico-prev,
+.btn:disabled:active .ico-prev {
+  transform: rotate(90deg);
+}
+
+.ico-next,
+.btn:disabled:hover .ico-next,
+.btn:disabled:active .ico-next {
+  transform: rotate(-90deg);
+}
+
+/* 그리드 */
+.grid-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,130 @@
+//***********************************************************
+//# name : Visual & Cover (ver.2.0)
+//# date : 2020.04.29
+//# desc : 비주얼 영역 및 Cover 작업
+//***********************************************************/
+
+// Visual Wrap
+.visual-wrap{
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 330px;
+  z-index: 0;
+ 
+  .title{
+    position: absolute;
+    top: 35px;
+    display:block;
+    padding:0 9.3333vw;
+    line-height: 1.5rem;
+    @include fontHead(100);
+    font-size: 1.125rem;
+    color: $white;
+    letter-spacing: -0.025em;
+  }
+  .comment-4{
+    position: absolute;
+    bottom: 28px;
+    display:block;
+    padding:0 9.3333vw;
+    font-size: 13px;
+    color: #c0c0c0;
+  }
+}
+
+// Cover
+.cover{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include backgroundImg();
+  .title-wrap{
+    position: relative;
+    width:81.3333vw;
+    height: 100%;
+    margin:0 auto;
+    .title{
+      top: 77px;
+      padding:0;
+      font-size: 2rem;
+      line-height: 2.3125rem;
+      letter-spacing: -0.025em;
+    }
+    .content-text{
+      position: absolute;
+      bottom: 40px;
+      word-break:keep-all;
+      font-size: 1rem; // 16px
+      line-height: 1.5rem;
+      color:$white;
+      overflow: hidden;
+    }
+  }
+}
+
+
+.highlight-wrap{
+  position: relative;
+  background-color: $black;
+  width: 100%;
+  height: 250px;
+  margin-top: -50px;
+  .img-wrap{
+    position: absolute;
+    top: -54px;
+    right: 4vw;
+    width: 145px;
+    height: auto;
+    margin: 0;
+    clear: both;
+    z-index: 10;
+  }
+  .list-wrap{
+    dl{
+      display: block;
+    }
+    dt{
+      display: block;
+      background-color: $grey-90;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 7.5%;
+      margin-bottom: 20px;
+      font-size: 16px; // 16px
+      color:$white;
+    }
+    dd{
+      background-color: $black;
+      width: 85%;
+      margin: auto;
+      color:$grey-c6;
+      font-size: 14px; //14px
+    }
+  }
+}
+// G70 공통 intro, visual 이미지
+$gnb :(
+  'design' : 7,
+  'performance' : 4,
+  'adas' : 5,
+  'newtech' : 2,
+  'your' : 0
+);
+
+@each $name, $idx in $gnb {
+  // cover background
+  .#{$name} .visual-wrap {
+    background-image: url('../img/gv70/mobile/bg_cover_#{$name}.png');
+  }
+  // visual background
+  @if $idx > 0{
+    @for $i from 2 through $idx {
+      .#{unquote($name)}#{$i} .visual-wrap{
+        background-image: url('../img/gv70/mobile/bg_visual_#{$name}#{$i}.png');
+      }
+    }
+  }
+}

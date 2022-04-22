@@ -1,0 +1,71 @@
+//***********************************************************
+//# name : Cover
+//# date : 2020.010.09
+//# desc : Cover WEB
+//# etc  : 커버 이미지 경로는 web_g70/mobile_g70에 지정
+//***********************************************************/
+.cover{
+  position: relative;
+  background-color: $grey-14;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  min-height: 640px;
+  overflow: hidden;
+  .title-wrap{
+    position: relative;
+    width: 1640px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 140px;
+    padding-left: 80px;
+    color: $white;
+    .title{
+      position: relative;
+      top: 0;
+      left: 0;
+      border:0 none;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin-bottom: 14px;
+      @include fontHead(100);
+      font-size: 36px;
+      transform: none;
+      letter-spacing: -0.025em;
+    }
+    .content-text{
+      max-width: 930px;
+      line-height: 25px;
+      font-size: 16px;
+      word-break:keep-all;
+      overflow: hidden;
+      color: $grey-ed;
+    }
+  }
+}
+
+// G70 공통 intro, visual 이미지
+$gnb :(
+  'design' : 7,
+  'performance' : 4,
+  'adas' : 5,
+  'newtech' : 2,
+  'your' : 0
+);
+
+@each $name, $idx in $gnb {
+  // cover background
+  .#{$name} .visual-wrap {
+    background-image: url('../img/gv70/web/bg_cover_#{$name}.png');
+  }
+  // visual background
+  @if $idx > 0{
+    @for $i from 2 through $idx {
+      .#{unquote($name)}#{$i} .visual-wrap{
+        background-image: url('../img/gv70/web/bg_visual_#{$name}#{$i}.png');
+      }
+    }
+  }
+}

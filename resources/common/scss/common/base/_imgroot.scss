@@ -1,0 +1,26 @@
+// #################################################################
+// background-img 경로
+// 개별 이미지 지정으로, css 폴더를 기준으로 상대경로
+// #################################################################
+@each $name, $idx in $gnb {
+  // cover background
+  .#{$name} .visual-wrap {
+    background-image: url('../img/common/cover_#{$name}.png');
+  }
+  // visual background
+  @if $idx > 0{
+    @for $i from 1 through $idx {
+      .#{unquote($name)}#{$i} .visual-wrap{
+        background-image: url('../img/common/visual_#{$name}#{$i}.png');
+      }
+    }
+  }
+}
+
+.dropdown-group.grey{
+  .title{
+    @include after(){
+      background-image: url('../img/common/ico_arrow_dark.png');
+    }
+  }
+}

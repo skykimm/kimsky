@@ -1,0 +1,632 @@
+// #####################################################
+// mypage
+// #####################################################
+#container.mypage{
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+// #####################################################
+// Info user
+// #####################################################
+.sub-visual{
+  background: #111;
+  width: 100%; 
+  .mypage-text-wrap{
+    margin: 0 auto;
+    padding: 40px 1.875rem 1.875rem;
+    h3{
+      margin-bottom: 5px;
+      @include fontBody();
+      font-size: 1.875rem;  
+      color: $white;
+    }
+    h4{
+      margin-bottom: 24px;
+      font-size: 0.875rem;
+      color:$white;
+      span:before{
+        content:'';
+        display: inline-block;
+        background: rgba($grey-db, .2);
+        width: 1px;
+        height: 0.75rem;
+        margin:0 13px;
+        vertical-align: middle;
+      }
+    }
+    a{
+      display: inline-block;
+      border: 1px solid $white;
+      width: auto;
+      padding: 11px 18px;
+      text-align: center;
+      color:$white;
+      font-size: 0.875rem;
+    }
+  }
+  .mypage-status-wrap{
+    display: flex;
+    background: $black;
+    width: 100%;
+    .status-curnt{
+      position: relative;
+      flex: 1;
+      display: inline-flex;
+      justify-content: space-between;
+      padding: 18px pxTovw(40);
+      dt,
+      dd{
+        font-size: 0.875rem;
+        color: $white;
+      }
+      dd{
+        min-width: 25px;
+        font-weight: 600;
+        overflow: hidden;
+      }
+      &:last-child:before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 0.5rem);
+        display: inline-block;
+        background: rgba(112,112,112, 0.8);
+        width: 1px;
+        height: 1rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+// #####################################################
+// Function menu (기능)
+// #####################################################
+.mypage{
+  .content{
+    width: 100%;
+    padding: 2rem pxTovw(40) 0;
+  }
+  .complete-wrap{
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 25px;
+    font-size: 0;
+  }
+  .complete-content{
+    >dl{      
+      dt{
+        background: #E5E5E5;
+        border-top: 1px solid #D9D9D9;
+        width: 100%; 
+        height: 2.875rem;
+        line-height: 2.875rem;
+        padding:0 1.5rem;
+        color:$color-primary-gv;
+        font-size: 1.0625rem;
+        @include fontBody();
+      } 
+      dd{
+        background: #F8F8F8;
+        // height: 30px;
+        // line-height: 30px;
+        padding:0 1.5rem;
+        color:$grey-26;
+        &:first-of-type{
+          padding-top: 18px;
+          box-sizing: content-box;
+        }
+        &:last-of-type{
+          padding-bottom: 18px;
+          box-sizing: content-box;
+        }
+      }
+    }
+    .chk-group {
+      input:checked +label .chk{
+        border-color: $color-primary-gv;
+        background-color: transparent;
+      }
+      label{
+        min-height: 1.875rem;
+        line-height: 1.875rem;
+        a{
+          font-size: 1rem;
+          color:$grey-26;
+        }
+      }
+      .chk{
+        // top: calc(50% - 11px);
+        top: 4px;
+        background: transparent;
+        width: 22px;
+        height: 22px;
+        &:after{
+          // display: block;
+          left: 0.375rem;
+          width: 0.3125rem;
+          height: 0.625rem;
+          border-color: $black;
+        }
+      }
+    }
+  }
+  .dropdown-group{
+    background: $white;
+    padding: 1.25rem 1.5rem;
+    > .dropdown-btn{
+      position: relative;
+      width: 5.9375rem;
+      height: 1.5625rem;
+      padding: 0;
+      font-size: 1.25rem;
+      @include fontBody();
+      color:$black;
+      &:after{
+        margin-left: 8px;
+        background: url('../img/ic_dropdown_17.svg') no-repeat center center;
+        background-size: cover;
+        width: 17px;
+        height: 11px;
+        right: auto;
+      }
+    }
+    > p{
+      position: absolute; 
+      top: 1.25rem;
+      right: 1.5rem;
+      font-size: 16px;
+      @include fontBody();
+      color:$color-primary-gv;
+    }
+    progress{
+      width: 100%;
+      height: 4px;
+      margin-top: 0.9375rem;
+    }
+  }
+  .dropdown-box{
+    background: $white;
+    border-top: none;
+  }
+}
+
+// #####################################################
+// Survey & Quiz common
+// #####################################################
+.popup-mypage{
+  .group-header{
+    .category{
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $color-primary-gv;
+    }
+    .title{
+      font-size: 1.0625rem;
+      color: $black;
+      line-height: 1.5;
+    }
+    .explan{
+      font-size: 0.875rem;
+      color: $grey-a2;
+      margin-top: 5px;
+      &:before{
+        content: '※';
+        margin-right: 3px;
+      }
+    }
+  }
+  .form-group{
+    margin-top: 1rem;
+    .rdo-group,
+    .chk-group{
+      width: 100%;
+    }
+    label{
+      width: 100%;
+      color: $black;
+    }
+    input[type='text']{
+      width: 100%;
+      &:focus{
+        border-bottom: 1px solid $black;
+      }
+    }
+    div + input[type='text']{
+      margin-top: 1rem;
+    }
+  }
+}
+// survey popup
+.popup-mypage.survey{
+  padding-bottom: 0;
+  .popup-header{
+    align-items: flex-end;
+    .title{
+      max-height: 10.9375rem;
+      @include eillipse(3);
+      color: $black;
+    }
+  }
+  .popup-content{
+    .survey-form{
+      padding: 32px 1.875rem 3.125rem;
+    }
+    .survey-group+.survey-group{
+      margin-top: 36px;
+    }
+  }
+  .btn-wrap{
+    display: flex;
+    margin: 0;
+    padding: 0 1.875rem 1.875rem;
+    text-align: right;
+    .primary{
+      flex:1;
+      padding: 1.0625rem 0;
+      background-color: $black;
+    }
+  }
+}
+// quiz popup
+.popup-mypage.quiz{
+  .popup-header{
+    flex-direction: column;
+    justify-content: flex-end;
+    .category{
+      display: block;
+      margin-bottom: 5px;
+      line-height: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $color-primary-gv;
+    }
+    .title{
+      max-height: 60px;// 2 line
+      @include eillipse(2);
+    }
+  }
+  .popup-content{
+    padding-bottom: 35px;
+    .quiz-img{
+      height: 50vw;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+// #####################################################
+// Survey
+// #####################################################
+.survey{
+  // header
+  &-header{
+    margin-bottom: 1.75rem;
+    .header-title{
+      margin-bottom: 6px;
+      @include fontHead(100);
+      font-size: 1.6875rem;
+    }
+    .header-txt{
+      line-height: 1.25rem;
+      font-size: 0.875rem;
+      color: $grey-75;
+    }
+  }
+  // list
+  &-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .survey-item{
+      position: relative;
+      border: 1px solid #E5E5E5;
+      width: pxTovw(670);
+      margin-bottom: 1rem;
+      padding: 1.375rem 1.5rem 4.125rem 1.5rem;
+      .badge{
+        margin: 0;
+      }
+      .item-title{
+        width: 80%;
+        margin: 1.0625rem 0 1rem;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        color: $black;
+      }
+      .item-count{
+        display: block;
+        text-align: right;
+        @include fontBody();
+        font-size: 0.875rem;
+        color: $grey-26;
+        margin-bottom: 5px;
+      }
+      .btn-survey{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: $black;
+        height: 56px;
+        color: $white;
+        font-size: 18px;
+        text-align: center;
+        .arr-right{
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          border-color: $white;
+          width: 10px;
+          height: 10px;
+          transform: translateY(-50%) rotate(135deg);
+        }
+      }
+      &.is-disabled{
+        .badge{
+          border-color: #E5E5E5;
+          color: #E5E5E5;
+        }
+        .item-title,
+        .item-count{
+          color: #E5E5E5;
+        }
+        .btn-survey{
+          background-color: #E5E5E5;
+        }
+      }
+    }
+  }
+}
+// #####################################################
+// Quiz
+// #####################################################
+.quiz{
+  //list
+  &-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-item{
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: inherit;
+    font-size: 0;
+    .quiz-category{
+      position: relative;
+      display: block;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      @include fontBody();
+      .arr-right{
+        border-width: 2px 0 0 2px;
+        border-color: $grey-a2;
+        margin: -2px 5px 0;
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .quiz-img{
+      position: relative;
+      width: 100%;
+      height: pxTove(332);
+      &:before{
+        content:'';
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        background: rgba($black, .2);
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    .quiz-status{
+      position: relative;
+      width: 100%;
+      border: 1px solid #E5E5E5;
+      border-top: 0;
+      padding: 1.125rem 1.5rem;
+      .status-count{
+        @include fontHead();
+        font-size: 1rem;
+        color: $grey-90;
+        .curent{
+          color: $grey-26;
+          font-size: 1.0625rem;
+          +.total{
+            font-size: 1.0625rem;
+          }
+        }
+      }
+      .status-percent{
+        position: absolute;
+        right: 1.5rem;
+        @include fontBody();
+        font-size: 1rem;
+        color: $color-primary-gv;
+      }
+      progress {
+        width: 100%;
+        height: 4px;
+        margin-top: 15px;
+      }
+    }
+  }
+  // popup content - group
+  .group-header{
+    padding: 1.375rem 1.875rem 0;
+  }
+  &-img{
+    width: 100%;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &-form{
+    padding: 0 1.875rem;
+    margin-bottom: 32px;
+  }
+  &-essay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .form-group{
+      width: 100%;
+    }
+    .btn-submit{
+      flex: 0 0 auto;
+      background-color: $grey-f8;
+      border: 1px solid #E5E5E5;
+      padding: 14px 20px;
+      margin-top: 20px;
+      font-size: 0.9375rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  &-ox{
+    display: flex;
+    padding: 24px 0;
+    text-align: center;
+    .form-group{
+      flex:1;
+      input{
+        display: none;
+      }
+      label{
+        display: inline-block;
+        border: 1px solid #E5E5E5;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 22px;
+        font-size: 0;
+        color: transparent;
+      }
+      input:checked+label{
+        border-color: $color-primary-gv;
+        &:before,
+        &:after{
+          border-color: $color-primary-gv;
+        }
+      }
+    }
+    
+    .answer-o label:before{
+      content: '';
+      display: inline-block;
+      border:8px solid #E5E5E5;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .answer-x{
+      position: relative;
+      &:before{
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #E5E5E5;
+        width: 1px;
+        height: 56px;
+        transform:  translateY(-50%);
+      }
+      label{
+        position: relative;
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          top: calc(50% - 30px);
+          left: calc(50% - 4px);
+          display: inline-block;
+          border: solid #E5E5E5;
+          border-width: 0 0 0 8px;
+          width: 0px;
+          height: 60px;
+        }
+        &:before{
+          transform: rotate(45deg);
+        }
+        &:after{
+          transform: rotate(-45deg)
+        }
+      }
+    }
+  }
+  // comment
+  &-cmt{
+    display: none;
+    padding: 0 1.875rem;
+    &.is-show{
+      display: block;
+    }
+    .cmt-title{
+      background-color: rgba(229,229,229,0.7);
+      width: 100%;
+      padding: 0.8125rem 0.375rem;
+      @include fontBody();
+      font-size: 0.9375rem;
+      color: #757575;
+      &:before{
+        content:'';
+        display: inline-block;
+        background: url('../img/mypage/ic_quiz_wrong.svg') no-repeat 50% 50%;
+        width: 1rem;
+        height: 1rem;
+        margin:0 0.625rem;
+        vertical-align: middle;
+      }
+      &.answer{
+        color: $color-primary-gv;
+        &:before{
+          background-image: url('../img/mypage/ic_quiz_answer.svg');
+        }
+      }
+    }
+    .cmt-hint{
+      background: $grey-f8;
+      padding: 0.9375rem 1rem;
+      dt{
+        margin-bottom: 6px;
+        font-size: 0.875rem;
+        color: $color-primary-gv;
+      }
+      dd{
+        font-size: 0.875rem;
+        color: $grey-66;
+      }
+      &+.cmt-hint{
+        padding-top: 0;
+        &:before{
+          content:'';
+          display: block;
+          background: rgba(#E5E5E5, .3);
+          width: 100%;
+          height: 1px;
+          margin-bottom: 0.9375rem;
+        }
+      }
+    }
+  }
+}

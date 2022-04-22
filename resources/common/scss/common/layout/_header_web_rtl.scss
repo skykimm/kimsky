@@ -1,0 +1,89 @@
+@import 'header_web';
+/* ----------------------------------------------------------
+	GNB BAR
+---------------------------------------------------------- */
+.gnb-wrap{
+  .top-menu{
+    left: 0;
+    right: auto;
+    >li:after{
+      left: 0;
+      right: auto;
+    }
+    >li:last-child .item{
+      padding: 6px 14px 6px 0;
+    }  
+  }
+  .dropdown-btn {
+    padding: 6px 14px 6px 24px;
+    &:after {
+      left: 10px;
+      right: auto;
+    }
+  }
+  .dropdown-group{
+    .dropdown-box li{
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------
+	Navigation
+---------------------------------------------------------- */
+
+#gnb {
+  .gnb{
+    &-inner{
+      .btn-tg-search{
+        margin-right: 27px;
+        margin-left: auto;
+        left: 0;
+        right: auto;
+      }
+    }
+    &-list-group {
+      float: right;
+      padding-right: 60px;
+    }
+    &-list>li+li{
+      margin-right: 10px;
+      margin-left: auto;
+    }
+  }
+  .logo {
+    background-position: right center;
+    float: right;
+  }
+}
+// 2depth
+#gnb .sub-wrap{
+  right: 0;
+  left: auto;
+  .sub-container{
+    &:before{
+      right: 100%;
+    }
+    &:after{
+      left:100%;
+    }
+  }
+}
+
+#gnb .swiper-container-horizontal{
+  .swiper-button{
+    &-prev{
+      left:-30px;
+      right: auto;
+      padding-right: 30px;
+      padding-left: 0;
+    }
+    &-next{
+      left: auto;
+      right:-30px;
+      padding-left: 30px;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+
+.list-wrap{
+  margin: 17px 0;
+  color: $grey-14;
+  dl{
+    display:block;
+    margin:0 auto;
+    line-height: 1.4;
+    .title{
+      margin-bottom: 10px;
+      @include fontHead();
+      font-size: 16px; 
+      color: $grey-14;
+    }
+    &>dd{
+      position: relative;
+      padding-left: 10px;
+      font-size: 16px; 
+      word-break: keep-all;
+      @include before{
+        position: absolute;
+        left: 0;
+      }
+      &+dd{
+        margin-top: 5px;
+      }
+      &>.list-wrap{
+        margin: 3px 0;
+        dl{
+          display: block;
+        }
+      }
+    }
+  }
+}
+// icon
+.list-wrap{
+  %icon{
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+  %text{
+    padding-left: 15px;
+    @include before{
+      top: 0px;
+    }
+  }
+  &.bar>dl>dd:before{
+    top: 9px;
+    background-color: $grey-33;
+    width: 4px;
+    height: 1px;
+  }
+  &.square>dl>dd:before{
+    @extend %icon;
+    background-color: $grey-33;
+  }
+  &.circle>dl>dd{
+    padding-left: 10px;
+    &:before{
+      content:'•';
+      top: 0px;
+    }
+  }
+  &.ref>dl>dd{
+    @extend %text;
+    &:before{
+      content:'※';
+    }
+  }
+  &.star>dl>dd{
+    @extend %text;
+    &:before{
+      content:'*';
+      padding-top: 3px;
+    }
+  }
+  &.circle-num>dl>dd{
+    padding-left: 20px;
+    &:before{
+      content: attr(data-num);
+      top: 0px;
+    }
+  }
+  &.num>dl{
+    dd{
+      display: list-item;
+      margin-left: 16px;
+      padding: 0;
+      list-style-type: decimal;
+      &:before{
+        content: none;
+      }
+    }
+  }
+}
+
+// style
+.list-wrap.type00{
+  margin: 16px 0;
+  .title{
+    color: $grey-90;
+  }
+  &.bar>dl>dd:before,
+  &.square>dl>dd:before{
+    background-color: $grey-4d;
+  }
+  dl>dd{
+    font-size: 14px;
+    color: $grey-4d;
+    .bar>dl>dd:before,
+    .square>dl>dd:before{
+      background-color: $grey-4d;
+    }
+  }
+}
+// width 100%
+.list-wrap.type01{
+  margin-top: 16px;
+  dl{
+    display: block;
+    dt.title{
+      text-align: inherit;
+    }
+    dd{
+      color: $grey-4d;
+      font-size: 14px;
+    }
+  }
+}
+// dd:before remove position absolute
+.list-wrap.type02{
+  dl{
+    display: block;
+    dd{
+      color: $grey-6f;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 14px;
+      &:before{
+        display:inline-block;
+        position: relative;
+        margin-right: 3px;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+// list-style
+.list-sm{
+  dl{
+    dd{
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+  }
+}
+.list-wrap.flex-wrap{
+  padding: 20px 11px;
+  margin-left: 0;
+  margin-right: 0;
+}

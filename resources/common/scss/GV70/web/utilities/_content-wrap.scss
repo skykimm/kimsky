@@ -1,0 +1,223 @@
+//GV70
+.header-wrap{
+  margin-bottom: 24px;
+  color: $black;
+  .title{
+    margin: 0 0 12px 0;
+    @include fontBody(600);
+    line-height: 1.1;
+    font-size: 28px;
+    word-break: keep-all;
+    color: $black;
+    .comment-1{
+      display: inline-block;
+      margin-top: 5px;
+      font-weight: normal;
+      color: $black;
+    }
+    .badge-txt-new{
+      font-size: 16px;
+    }
+  }
+  .sub-title{
+    margin: 0 0 8px 0;
+    @include fontHead();
+    font-size: 20px;
+  }
+  .text{
+    line-height: 22px;
+    font-size: 16px;
+    word-break: keep-all;
+    color: $grey-4d;
+  }
+  .list-wrap{
+    margin:10px 0 0;
+    >dl{
+      display: block;
+      dd{
+        color: $grey-4d;
+        font-size: 16px;
+      }
+    }
+  }
+  .comment-3{
+    display: block;
+    margin-top: 6px;
+    font-weight: normal;
+    color: $grey-75;
+  }
+}
+// sub head
+.sub-wrap{
+  .header-wrap {
+    margin-bottom: 0;
+    .title{
+      margin-bottom: 0;
+      font-size: 22px;
+      font-weight: 600;
+      color: $grey-26;
+      &:only-child{
+        margin-bottom: 18px;
+      }
+    }
+    .heading-4{
+      margin:18px 0 20px;
+    }
+    .text{
+      margin: 10px 0 18px;
+    }
+  }
+}
+.text-wrap{
+  .title{
+    margin: 0 0 12px 0;
+    line-height: 1.1;
+    @include fontBody();
+    font-size: 26px;
+    color: $grey-14;
+    word-break: keep-all;
+  }
+  .sub-title{
+    margin-bottom: 6px;
+    @include fontHead();
+    font-size: 16px; 
+    color: $grey-14;
+  }
+  .text{
+    line-height: 22px;
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: $grey-66;
+    word-break: keep-all;
+  }
+}
+.img-wrap{
+  position: relative;
+  margin: 24px auto 0;
+  font-size:0;
+  &.small{
+    margin:0;
+  }
+  img{
+    width: 100%;
+  }
+  .img-label{
+    padding: 16px 0 12px;
+    font-size: 16px;
+    color: $grey-5f;
+    text-align: center;    
+    word-break: keep-all;
+    em{
+      display: block;
+      padding-top: 2px;
+      font-size: 14px;
+      color: $grey-90;    
+    }
+  } 
+  .comment-3{
+    margin-top: 14px;
+    color: $grey-75;
+  }
+  .badge{
+    position: absolute;
+    left:0;
+  }
+  .badge.white{
+    position: relative;
+    display: block;
+    margin: 0 0 16px;
+    @include fontBody(600);
+    font-size: 16px;
+    text-align: center;    
+  }
+  &+table{
+    margin: 26px auto;
+  }
+}
+
+// gv70
+.img-wrap .inner-tbl-wrap{
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  display: flex;
+  .inner-tbl{
+    width: 130px;
+    margin: 0 2px;
+    dt,
+    dd{
+      display: block;
+      height: 31px;
+      line-height: 31px;
+      text-align: center;
+      @include fontHead();
+      font-size: 12px;
+      color: $grey-14;
+    }
+    dt{
+      background: $grey-f7;
+      &.tbl-primary{
+        background: $color-primary;
+        color: $white;
+      }
+    }
+    dd{
+      background: $white;
+    }
+  }
+}
+
+.btn-wrap{
+  float: right;
+  margin-top: -3px;
+  margin-left: 5px;
+  &+.header-wrap{
+    margin-bottom: 24px;
+  }
+}
+
+.bg-gray{
+  background-color: $grey-f8;
+  padding: 20px;
+  margin-bottom: 16px;
+  .title{
+    text-align: center;
+  }
+  .text{
+    margin: 0;
+    line-height: 20px;
+    color: $grey-66;
+  }
+  .comment-3{
+    margin-top: 14px;
+  }
+}
+
+// gv70
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -9px;
+  >.flex{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin: 0 9px;
+    .text-wrap{
+      margin-top: 16px;
+    }
+    .bg-gray{
+      flex:1 1 auto;
+      margin: 0;
+    }
+  }
+  .text-wrap{
+    text-align: center;
+    .title{
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: $grey-26;
+    }
+  }
+}

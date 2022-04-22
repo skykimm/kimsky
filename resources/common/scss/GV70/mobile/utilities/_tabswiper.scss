@@ -1,0 +1,86 @@
+.tab-wrapper{
+    position: relative;
+    margin: 0 auto 30px;
+    // .swiper-button-next{
+    //   right: -30px;
+    //   &::after{
+    //     content: "";
+    //     display: inline-block;
+    //     border: solid $color-primary-gv;
+    //     border-width: 0 1px 1px 0;
+    //     padding: 4px;
+    //     transform: rotate(-45deg);
+    //   }
+    // }
+    // .swiper-button-prev{
+    //   left: -30px;
+    //   &::after{
+    //     content: "";
+    //     display: inline-block;
+    //     border: solid $color-primary-gv;
+    //     border-width: 0 1px 1px 0;
+    //     padding: 4px;
+    //     transform: rotate(135deg);
+    //   }
+    // }
+    .tab-swiper{
+        overflow: hidden;
+        .tab-title{
+        // display: inline-block;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        height: 58px;
+        &.swiper-wrapper{
+            width: max-content !important;
+            overflow: hidden;
+            .swiper-slide{
+            text-align: center;
+            width: 80px !important;
+            }
+        }
+        .item{
+            margin: 0;
+            word-break: break-word;
+            cursor: pointer;
+            height: 58px;
+            padding: 0.9375rem 0;
+            font-size: 18px;
+            color: #808080;
+            -webkit-tap-highlight-color: transparent;
+            &.is-active{
+            color: #AD7B61;
+            font-weight: 600;
+            -webkit-tap-highlight-color: transparent;
+            }
+        }
+        .line{
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            .line-inner{
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 1px;
+            transition: all .5s;
+            z-index: 1;
+            background-color:#AD7B61;
+            }
+        }
+        }
+    }
+    &+.tab-content{
+        .item-wrap{
+            display: none;
+            &.item-wrap.is-active{
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import 'header_mobile';
+
+/* ----------------------------------------------------------
+	Navigation
+---------------------------------------------------------- */
+/* aside */
+aside.gnb {
+  left:-100%;
+  right: auto;
+  &.open{
+    left:0;
+    right: auto;
+  }
+  nav .dropdown{
+    background-position: top 50% left 1.25rem;
+  }
+  .gnb-list-group{
+    text-align: right;
+  }
+}
+/* 아이콘 닫기 */
+aside.gnb .btn-nav-close{  
+  left: 20px;
+  right: auto;
+}

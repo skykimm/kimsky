@@ -1,0 +1,83 @@
+// Heading
+.heading{
+  &-1{
+    font-size: 26px;
+    font-weight: 600;
+  }
+  &-2{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &-3{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  &-4{
+    font-size: 18px;
+    color: $grey-26;
+    margin-bottom: 20px;
+  }
+}
+
+// Comment
+.comment{
+  &-1{
+    font-size: 16px;
+    color: $grey-90;
+    word-break: keep-all;
+  }
+  &-2{
+    font-size: 15px;
+    color: $grey-90;
+    word-break: keep-all;
+  }
+  &-3{
+    font-size: 14px;
+    color: $grey-90;
+    word-break: keep-all;
+  }
+  &-4{
+    font-size: 12px;
+    color: $grey-90;
+    word-break: keep-all;
+  }
+}
+
+// color
+.color{
+  &-grey-90{
+    color: $grey-90 !important;
+  }
+  &-grey-6f{
+    color: $grey-6f !important;
+  }
+  &-primary{
+    color: $color-primary !important;
+  }
+}
+
+// font-color
+.txt-world{
+  margin: 8px 0;
+  .badge.primary{
+    padding: 3px 4px 2px;
+  }
+  em{
+    font-weight: 800;
+  }
+}
+
+// br
+.hide-pc{
+  display: none;
+}
+
+// 중동영어 예외 추가
+.ar-text{
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  word-break: keep-all;
+  font-size: 14px;
+  color: #996449;
+}

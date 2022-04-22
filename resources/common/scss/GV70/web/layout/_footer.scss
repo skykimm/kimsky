@@ -1,0 +1,70 @@
+// #####################################################
+// footer
+// #####################################################
+
+.footer{
+  position: relative;
+  width: 100%;
+  height: 64px;
+  min-width: 1200px;
+  z-index: 10;
+  border-top: 1px solid #dbdbdb;  
+  box-sizing: border-box;
+  .btn-group{
+    position: relative;
+    margin: 0 auto;
+    width: 1640px;
+    height:64px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn{
+      padding: 8px 0;
+      background-color: transparent;
+      font-size: 1rem;
+      cursor: pointer;
+      i{
+        display: inline-block;
+        vertical-align: baseline;
+        width: 0.5625rem;
+        height: 0.5625rem;
+        margin: 0 8px;
+      }
+    }
+  }
+  .arr-left, .arr-right{
+    border-color: $grey-6f;
+  }
+  .is-hide{
+    visibility: hidden;
+  }  
+}
+
+// cover fooer
+
+.cover-footer+.footer{
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background : #000;
+    opacity: 0.3;
+  }
+  border-top: none;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+    .btn-group{
+      .btn{
+        color: $white;
+      }
+    }
+  .arr-left, .arr-right{
+    border-color:$white;
+  }
+}

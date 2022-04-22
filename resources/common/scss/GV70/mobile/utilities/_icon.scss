@@ -1,0 +1,36 @@
+%iconLine{
+  @include absolute($top: calc(50% - 11px), $left: 50%);
+  width: 1px;
+  height: 22px;
+  background-color: $grey-14;
+}
+.ico{
+  position: relative;
+  &.close{
+    @include before{
+      @extend %iconLine;
+      width: 2px;
+      background-color: $black;
+      transform: rotate(45deg);
+    }
+    @include after{
+      @extend %iconLine;
+      width: 2px;
+      background-color: $black;
+      transform: rotate(135deg);
+    }
+  }
+  &.white{
+    border-color: $white;
+    &::before,
+    &::after{
+      background-color: $white;
+    }
+  }
+}
+
+@each $arrow in $arrs {
+  .arr-#{$arrow}{
+    @include icoArr($arrow)
+  }
+}

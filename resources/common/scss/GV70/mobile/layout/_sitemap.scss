@@ -1,0 +1,36 @@
+// #####################################################
+// Site map
+// #####################################################
+.sitemap{
+  padding: 88px pxTovw(60) 80px;
+  &-header{
+    margin-bottom: 40px;
+    .title{
+      @include fontBody(200);
+      font-size:1.6875rem;
+      color: $black;
+    }
+  }
+  &-link{
+    padding: 8px 0;
+    &+&{
+      border-top: 1px solid rgba($grey-db, .3);
+    }
+    dt,
+    dd{
+      > a{
+        display: block;
+        padding: 0.5rem 0;
+      }
+    }
+    dt > a{
+      @include fontBody();
+      font-size: 1.3125rem;
+      color: $color-primary-gv;
+    }
+    dd > a{
+      font-size: 1rem;
+      color: $grey-66;
+    }
+  }
+}

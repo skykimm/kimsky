@@ -1,0 +1,253 @@
+
+//************************************
+//# background
+//************************************
+@mixin backgroundImg($src: '', $repeat: no-repeat, $position: 50% 50%, $size: cover){
+  @if($src != ''){
+    background-image: url($src);
+  }
+  background-color: $transparent;
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+
+//************************************
+//# action style 관련
+//************************************
+@mixin hover() {
+  &:hover { @content; }
+}
+@mixin isStatus($status){
+  &.is-#{$status}{
+    @content;
+  }
+}
+//************************************
+//# button color
+//************************************
+@mixin buttonOutline($color) {
+  color: $color;
+  border-color: $color;
+}
+@mixin button($color) {
+  background-color: $color;
+  @if( lightness($color) < 100){
+    color: $white;
+  }
+  @else{
+    color: $black;
+  }
+}
+
+//************************************
+//# font family
+//************************************
+@mixin fontHead(){
+  font-family: 'genesisSansHead', "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+@mixin fontBody(){
+  font-family: 'genesisSans', "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+@mixin fontHead($weight : 400){
+  font-family: 'genesisSansHead', "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: $weight;
+}
+@mixin fontBody($weight : 400){
+  font-family: 'genesisSans', "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: $weight;
+}
+
+
+//************************************
+//# title style : G80
+//************************************
+@mixin fontStyle($size: inherit, $color: inherit, $align: inherit, $margin: inherit, $weight: inherit){
+  @if $size != inherit{
+    font-size: $size;
+  }
+  @if $color != inherit{
+    color: $color;
+  }
+  @if $align != inherit{
+    text-align: $align;
+  }
+  @if $margin != inherit{
+    margin: $margin;
+  }
+  @if $weight != inherit{
+    font-weight: $weight;
+  }
+}
+
+
+//************************************
+//# text eillipse
+//************************************
+@mixin eillipse(){
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+@mixin eillipse($line: 2){
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+//************************************
+//# icon
+//************************************
+@mixin icoArr($arrow){
+  display: inline-block;
+  border: 1px solid $black;
+  width: 8px;
+  height: 8px;
+  transform: rotate(135deg);
+  vertical-align: middle;
+  @if($arrow == 'bottom'){
+    border-width: 1px 1px 0 0;
+  }
+  @else if($arrow == 'left'){
+    border-width: 0 1px 1px 0;
+  }
+  @else if($arrow == 'top'){
+    border-width: 0 0 1px 1px;
+  }
+  @else if($arrow == 'right'){
+    border-width: 1px 0 0 1px;
+  }
+}
+//************************************
+//# list-wrap background
+//************************************
+@mixin listBgColor($padding: 20px){
+  background-color: $grey-ef;
+  padding: $padding;
+}
+//************************************
+//# list-wrap color
+//************************************
+@mixin listColor($color: $grey-90){
+  .title{
+    color: $color;
+  }
+  &.bar>dl>dd:before,
+  &.square>dl>dd:before{
+    background-color: $color;
+  }
+  dl>dd{
+    color: $color;
+    .bar>dl>dd:before,
+    .square>dl>dd:before{
+      background-color: $color;
+    }
+  }
+}
+
+//************************************
+//# PC 전용
+//************************************
+// list-wrap position layout 
+@mixin fixList($listWidth: 150px, $imgWidth: calc(100% - #{$listWidth})){
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  img{
+    width: $imgWidth;
+  }
+  .list-wrap{
+    background-color: transparent;
+    width: $listWidth;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top:0;
+    margin-bottom: 0;
+    dl{
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+//************************************
+//# position 관련
+//************************************
+@mixin clearfix(){
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+@mixin before(){
+  &:before{
+    content: '';
+    display: block;
+    @content;
+  }
+}
+@mixin after(){
+  &:after{
+    content: '';
+    display: block;
+    @content;
+  }
+}
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin fixed($top: auto, $right: auto, $bottom: auto, $left: auto){
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin flex($justify: center, $align: center, $dir: inherit, $wrap: inherit){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  @if $dir != inherit{
+    flex-direction: $dir;
+  }
+  @if $wrap != inherit{
+    flex-wrap: $wrap;
+  }
+}
+//wrap
+@mixin wrap(){
+  width: 1200px;
+  margin: 0 auto;
+}
+// width G80
+@mixin widthPC(){
+  width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+// slide Width
+@mixin slideIdx($index: 3){
+  flex: none;
+  width: calc(100%/#{$index} - 12px);
+  &:nth-of-type(#{$index}n+1){
+    margin-left: 0;
+  }
+  &:nth-of-type(#{$index}n){
+    margin-right: 0;
+  }
+}
+//************************************
+//# Transition
+//************************************
+@mixin transition($tran...){
+  -webkit-transition: $tran;
+  transition: $tran;
+}

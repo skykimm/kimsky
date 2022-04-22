@@ -1,0 +1,10 @@
+/////////////////////////////////////////////
+// px to vw
+/////////////////////////////////////////////
+@function pxTovw($px, $base: 750){
+  @return $px/$base*100vw;
+}
+
+@function makeGrey($grey){
+  @return #{'#'+$grey+$grey+$grey};
+}

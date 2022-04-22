@@ -1,0 +1,107 @@
+
+/* input */
+input[type="text"],
+textarea{
+  border: none;
+  border-bottom: 1px solid #E5E5E5;
+  height: 46px;
+  padding: 0.875rem 1rem 0.875rem;
+  color: $black;
+  font-size: 0.9375rem;
+  background-color: transparent;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  // &:focus{
+  //   border-color: $color-primary-gv;
+  // }
+  &::placeholder{
+    color: makeGrey('bc');
+  }
+}
+/* radio & checkbox */
+@mixin inputForm($type){
+  .#{$type}-group{
+    display: inline-flex;
+    align-content: center;
+    position: relative;
+    padding-left:1.875rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      border: 0;
+      height: 0;
+      width: 0;
+      min-width: auto;
+      margin:0;
+      padding: 0;
+    }
+    label {
+      position: relative;
+      display: inline-flex;
+      align-content: center;
+      min-height: 1.625rem;
+      line-height: 1.625rem;
+      font-size: 1rem;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .#{$type}{
+      display: inline-block;
+      position: absolute;
+      top: 0.1875rem;
+      left: -1.875rem;
+      background-color: $white;
+      border: 1px solid $grey-db;
+      width: 1.25rem;
+      height: 1.25rem;
+      @if $type == 'rdo'{
+        border-radius: 50%; 
+      }
+      &:after{
+        content: "";
+        display: none;
+        position: absolute;
+        @if $type == 'chk'{
+          left: 6px;
+          top: 2px;
+          width: 5px;
+          height: 10px;
+          border: solid $black;
+          border-width: 0 0.125rem 0.125rem 0;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }@else if $type=='rdo'{
+          top: 5px;
+          left: 5px;
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background: $white;
+        }
+      }
+    }
+    input:checked+label .#{$type}{
+      background-color: $color-primary-gv;
+      border-color: $color-primary-gv;
+    }
+    input:checked+label .chk{
+      background-color: $white;
+      border-color: $color-primary-gv;
+    }
+    input:checked+label .#{$type}:after{
+      display: block;
+    }
+  }
+}
+
+@include inputForm('chk');
+@include inputForm('rdo');

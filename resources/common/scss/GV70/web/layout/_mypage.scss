@@ -1,0 +1,654 @@
+// #####################################################
+// mypage
+// #####################################################
+.mypage.container{
+  width: 100%;
+  min-width: 1200px;
+}
+// #####################################################
+// Info user
+// #####################################################
+.sub-visual{
+  background: #111;
+  width: 100%;
+  height: 336px;
+  margin-top: 60px;
+  padding: 84px 0 80px;
+  &-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 0 35px;
+  }
+  .mypage-text-wrap {
+    h3 {
+      margin-bottom: 6px;
+      @include fontBody();
+      font-size: 38px;
+      color: $white;
+    }
+    h4 {
+      margin-bottom: 40px;
+      font-size: 17px;
+      color: $white;
+      span {
+        border-left: 1px solid $grey-4d;
+        margin-left: 22px;
+        padding-left: 22px;
+      }
+    }
+    a {
+      display: block;
+      border: 1px solid $white;
+      width: 200px;
+      height: 52px;
+      line-height: 54px;
+      color: $white;
+      text-align: center;
+    }
+  }
+  .mypage-status-wrap{
+    position: relative;
+    background: $black;
+    width: 330px;
+    padding: 32px 15px;
+    text-align: center;
+    font-size: 0;
+    .title{
+      width: 100%;
+      margin-bottom: 16px;
+      @include fontBody();
+      font-size: 20px;
+      color: $color-primary-gv;
+    }
+    .status-curnt{
+      display: inline-block;
+      width: 50%;
+      dt{
+        margin-bottom: 7px;
+        font-size: 16px;
+        color: $white;
+      }
+      dd{
+        @include fontBody();
+        font-size: 40px;
+        color: $white;
+      }
+      &+.status-curnt{
+        &:before{
+          content:'';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: inline-block;
+          background: rgba(112,112,112, .5);
+          width: 1px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}
+// #####################################################
+// Function menu (기능)
+// #####################################################
+.mypage{
+  .content {
+    width: 1080px;
+    margin: 60px auto 0;
+  }
+  .complete-wrap {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+  }
+  .complete-content{
+    > dl{
+      dt{
+        background: rgba(229,229,229,0.7);
+        border-bottom: 1px solid #D9D9D9;
+        border-top: 1px solid #D9D9D9;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+        padding: 0 48px;
+        color: $color-primary-gv;
+        font-size: 18px;
+        @include fontBody();
+      }
+      dd {
+        background: #F8F8F8;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 50px;
+        color: #777777;
+        &:first-of-type {
+          padding-top: 20px;
+          box-sizing: content-box;
+        }
+        &:last-of-type {
+          padding-bottom: 20px;
+          box-sizing: content-box;
+        }
+      }
+    }
+    .chk-group {
+      input:checked +label .chk{
+        border-color: $color-primary-gv;
+        background: transparent;
+      }
+      label{
+        a,
+        a:active {
+          color: $black;
+          cursor: pointer;
+          &:hover {
+            color: #141414;
+          }
+        }
+      }
+      .chk {
+        top: calc(50% - 11px);
+        background: transparent;
+        &:after{
+          // display: block;
+          border-color: $black;
+        }
+      }
+    }
+  }
+
+  .dropdown-group {
+    background: $white;
+    width: auto;
+    margin: 35px 50px;
+    box-sizing: border-box;
+    &.is-open>.dropdown-btn:after{
+      transform: rotate(180deg);
+    }
+    >.dropdown-btn {
+      position: relative;
+      width: auto;
+      padding: 0 31px 0 0;
+      @include fontBody();
+      font-size: 30px;
+      color: $black;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: url('../img/ico_dropdown_19.png') no-repeat center center;
+        background-size: 19px 11px;
+        width: 19px;
+        height: 11px;
+        margin-top: -8px;
+        transition: .3s;
+      }
+    }
+    >p {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      color: $color-primary-gv;
+      @include fontBody();
+      font-size: 20px;
+    }
+    progress {
+      width: 100%;
+      height: 4px;
+    }
+  }
+  .dropdown-box {
+    display: none;
+    background: $white;
+    border-top: none;
+  }
+
+}
+// #####################################################
+// Survey & Quiz common Style
+// #####################################################
+.popup-mypage{
+  .group-header{
+    margin: 12px 0;
+    .category{
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-primary-gv;
+    }
+    .title{
+      color: $black;
+      font-size: 20px;
+    }
+    .explan{
+      font-size: 14px;
+      color: $grey-a2;
+      margin-top: 4px;
+      &:before{
+        content: '※';
+        margin-right: 3px;
+      }
+    }
+  }
+  .form-group{
+    margin-bottom: 16px;
+    label{
+      font-size: 18px;
+      color: $grey-26;
+    }
+    input[type='text']{
+      width: 100%;
+    }
+    div + input[type='text']{
+      margin-top: 10px;
+    }
+  }
+}
+// Survey popup
+.popup-mypage.survey{
+  .popup-header{
+    align-items: flex-end;
+    .title{
+      max-height: 115px; // 3 line
+      @include eillipse(3);
+      font-size: 30px;
+      color: $black;
+      max-width: calc(100% - 100px);
+    }
+  }
+  .btn-wrap{
+    float: none;
+    margin: 0;
+    padding: 28px 0 44px;
+    text-align: right;
+    .primary{
+      width: 200px;
+      padding: 16px 52px;
+      font-size: 16px;
+    }
+  }
+}
+// Quiz popup
+.popup-mypage.quiz{
+  .popup-header{
+    flex-direction: column;
+    .category{
+      display: block;
+      margin-bottom: 5px;
+      line-height: 28px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-primary-gv;
+    }
+    .title{
+      max-height: 76px;// 2 line
+      @include eillipse(2);
+      max-width: calc(100% - 100px);
+    }
+  }
+  .popup-content{
+    >:last-child{
+      margin-bottom: 44px;
+    }
+    .quiz-img{
+      height: 340px;
+      margin-bottom: 24px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .popup-footer{
+    .btn:first-of-type{
+      color: #000;
+      border-color: #000;
+      .ico{
+        border-color: #000;
+      }
+    }
+    .btn+.btn{
+      margin-left: 12px;
+      background-color: #000;
+    }
+    .primary:disabled{
+      // background: rgba($color-primary-gv, .3);
+      background: #b1b1b1;
+    }
+  }
+}
+// #####################################################
+// Survey
+// #####################################################
+.survey{
+  // header
+  &-header{
+    margin-bottom: 28px;
+    .header-title{
+      font-size: 30px;
+      @include fontHead(100);
+    }
+    .header-txt{
+      margin-top: 6px;
+      line-height: 22px;
+      font-size: 14px;
+      color: $grey-66;
+    }
+  }
+  // list
+  &-section{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    .survey-item{
+      position: relative;
+      border: 1px solid $grey-db;
+      width: 348px;
+      margin:0 9px 18px;
+      padding: 24px 24px 74px 24px;
+      box-sizing: border-box;
+      .badge{
+        margin: 0;
+        width: 104px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .item-title{
+        width: 80%;
+        margin: 16px 0 24px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .item-count{
+        position: absolute;
+        right: 24px;
+        bottom: 72px;
+        display: block;
+        text-align: right;
+        font-size: 16px;
+      }
+      .btn-survey{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: $grey-26;
+        height: 56px;
+        color: $white;
+        font-size: 16px;
+        text-align: center;
+        .arr-right{
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          border-color: $white;
+          width: 11px;
+          height: 11px;
+          transform: translateY(-50%) rotate(135deg);
+        }
+      }
+      &.is-disabled{
+        .badge{
+          border-color: $grey-db;
+          color: $grey-db;
+        }
+        .item-title,
+        .item-count{
+          color: $grey-db;
+        }
+        .btn-survey{
+          background-color: $grey-db;
+        }
+      }
+    }
+  }
+  // popup
+  &-group{
+    + section.survey-group label{
+      font-size: 16px;
+    }
+    &+&{
+      margin-top: 36px;
+    }
+  }
+}
+// #####################################################
+// Quiz
+// #####################################################
+.quiz{
+  //list
+  &-section{
+    margin:0 -5px;
+    font-size: 0;
+  }
+  &-item{
+    display: inline-block;
+    width: 348px;
+    margin: 0 9px 40px;
+    padding: 0;
+    text-align: inherit;
+    font-size: 0;
+    .quiz-category{
+      position: relative;
+      display: block;
+      margin-bottom: 16px;
+      font-size: 20px;
+      @include fontBody();
+      .arr-right{
+        border-color: $grey-a2;
+        border-width: 2px 0 0 2px;
+        margin: -2px 5px 0;
+        width: 11px;
+        height: 11px;
+      }
+    }
+    .quiz-img{
+      position: relative;
+      width: 100%;
+      height: 190px;
+      &:before{
+        content:'';
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        background: rgba($black, .2);
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+    .quiz-status{
+      position: relative;
+      width: 100%;
+      border: 1px solid #e5e5e5;
+      border-top: 0;
+      padding: 26px 24px;
+      .status-count{
+        @include fontBody();
+        font-size: 18px;
+        color: $grey-90;
+        .curent{
+          color: $black;
+          +.total{
+            color: $grey-a2;
+          }
+        }
+      }
+      .status-percent{
+        position: absolute;
+        top: 26px;
+        right: 24px;
+        @include fontBody();
+        font-size: 18px;
+        color: $color-primary-gv;
+      }
+      progress {
+        width: 100%;
+        height: 4px;
+        margin-top: 16px;
+      }
+    }
+  }
+  // content
+  &-img{
+    width: 100%;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &-form{
+    margin-bottom: 28px;
+  }
+  &-essay{
+    .btn-submit{
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      padding: 9px 16px;
+      font-size: 14px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  &-ox{
+    display: flex;
+    padding: 24px 0;
+    text-align: center;
+    .quiz-rdo{
+      flex:1;
+      input{
+        display: none;
+      }
+      label{
+        display: inline-block;
+        border: 1px solid $grey-db;
+        border-radius: 50%;
+        width:100px;
+        height: 100px;
+        padding: 22px;
+        font-size: 0;
+        color: transparent;
+      }
+      input:checked+label{
+        border-color: $color-primary-gv;
+        &:before,
+        &:after{
+          border-color: $color-primary-gv;
+        }
+      }
+    }
+    .answer-o label:before{
+      content: '';
+      display: inline-block;
+      border:8px solid $grey-db;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .answer-x{
+      position: relative;
+      &:before{
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: $grey-db;
+        width: 1px;
+        height: 56px;
+        transform:  translateY(-50%);
+      }
+      label{
+        position: relative;
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          top: calc(50% - 30px);
+          left: calc(50% - 4px);
+          display: inline-block;
+          border: solid $grey-db;
+          border-width: 0 0 0 8px;
+          width: 0px;
+          height: 60px;
+        }
+        &:before{
+          transform: rotate(45deg);
+        }
+        &:after{
+          transform: rotate(-45deg)
+        }
+      }
+    }
+  }
+  // comment
+  &-cmt{
+    display: none;
+    &.is-show{
+      display: block;
+    }
+    .cmt-title{
+      background-color: #ededed;
+      width: 100%;
+      padding: 13px 14px;
+      @include fontBody();
+      font-size: 14px;
+      color: #757575;
+      &:before{
+        content:'';
+        display: inline-block;
+        background: url('../img/mypage/ic_quiz_wrong.svg') no-repeat 50% 50%;
+        width: 16px;
+        height: 16px;
+        margin: 0 10px;
+        vertical-align: middle;
+      }
+      &.answer{
+        color: $color-primary-gv;
+        &:before{
+          background-image: url('../img/mypage/ic_quiz_answer.svg');
+
+        }
+      }
+    }
+    .cmt-hint{
+      background: makeGrey('f8');
+      padding: 18px 24px;
+      dt{
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: $color-primary-gv;
+      }
+      dd{
+        font-size: 14px;
+        color: $grey-66;
+      }
+      &+.cmt-hint{
+        padding-top: 0;
+        &:before{
+          content:'';
+          display: block;
+          background: rgba($grey-db, .3);
+          width: 100%;
+          height: 1px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+}

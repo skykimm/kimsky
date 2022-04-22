@@ -15,3 +15,7 @@ button.readmore{
   width: 100%;
   background: none;
 }
+
+.table-label{
+  font-weight: bold;
+}

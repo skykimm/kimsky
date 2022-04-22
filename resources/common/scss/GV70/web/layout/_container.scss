@@ -1,0 +1,61 @@
+//***********************************************************
+//# name : container (ver.2.0)
+//# date : 2020.04.15
+//# desc : 공통 콘텐츠 스타일 적용 (PC)
+//***********************************************************/
+
+/*Default set*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, main {
+  word-break: keep-all;
+}
+
+body.not-scroll{
+  overflow: hidden;
+}
+.wrap{
+  width: 100%;
+  min-width: 1200px;
+  min-height: calc(100vh - 65px);
+  padding-top: 140px;
+  .container{
+    padding-top: 60px;
+  }
+}
+.container{
+  position: relative;
+  background-color: $white;
+  width: 1080px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 0 120px;
+  .content-wrap{
+    width: 100%;
+    &+.content-wrap{
+      padding-top: 120px;
+    }
+    .img-wrap{
+      &+.slide-wrap{
+        margin-top: 40px;
+      }
+    }
+  }
+}
+// G70
+.sub-wrap{
+  margin-top: 60px;
+  >.text-wrap{
+    .title{
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+// 유어제네시스 / 제원제네표 공통 간격
+.wrap[class*="your"] .container,
+.wrpa.comparison .container{
+  padding-top:80px;
+}

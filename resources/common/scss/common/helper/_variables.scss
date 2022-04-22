@@ -1,0 +1,122 @@
+/////////////////////////////////////////////
+// color
+/////////////////////////////////////////////
+$white: #ffffff;
+$black: #000000;
+$transparent : transparent;
+
+$color-primary: #a36b4f;
+$color-primary-light: #EEE4DF;
+
+$grey-fa: #FAFAFA;
+$grey-f8: #F8F8F8;
+$grey-f7: #F7F7F7;
+$grey-f4: #F4F4F4;
+$grey-ef: #EFEFEF;
+$grey-ed: #EDEDED;
+$grey-ea: #EAEAEA;
+$grey-df: #DFDFDF;
+$grey-db: #DBDBDB;
+$grey-dc: #DCDCDC;
+$grey-d9: #d9d9d9;
+$grey-d3: #d3d3d3;
+$grey-c6: #C6C6C6;
+$grey-aa: #AAAAAA;
+$grey-90: #909090;
+$grey-77: #777777;
+$grey-6f: #6f6f6f;
+$grey-5f: #5f5f5f;
+$grey-33: #333333;
+$grey-32: #323232;
+$grey-14: #141414;
+
+// 추가
+$grey-4d: #4D4D4D;
+$grey-66: #666666;
+$grey-26: #262626;
+$grey-f8: #F8F8F8;
+$grey-a2: #A2A2A2;
+$grey-75: #757575;
+$grey-80: #808080;
+
+$color-primary-gv : #996449;
+$color-point : #AD7B61;
+
+$tab-default-color: $grey-db;
+$table-border-color: $grey-db;
+
+$progress-bg: #EEE4DF;
+
+/////////////////////////////////////////////
+// layout
+/////////////////////////////////////////////
+
+// g70 값
+$l-width : 89.3333vw;
+$l-margin: 5.3333vw;
+
+// gv70 값
+$l-width-gv : 84vw; 
+$l-margin-gv: 8vw;
+/////////////////////////////////////////////
+// button, badge theme
+/////////////////////////////////////////////
+$basic-colors: (
+  "primary":    $color-primary,
+  "secondary":    $grey-f7,
+  "grey":      $grey-6f,
+  "white":      $white
+);
+
+$basic-colors-gv: (
+  "primary":    $color-primary-gv,
+  "secondary":    $grey-f7,
+  "grey":      $grey-6f,
+  "white":      $white
+);
+
+/////////////////////////////////////////////
+// icon
+/////////////////////////////////////////////
+$arrs: "top", "right", "bottom", "left";
+
+/////////////////////////////////////////////
+// font-size
+/////////////////////////////////////////////
+$h1-size: 24px;
+$h2-size: 22px;
+$h3-size: 16px !default;
+$h4-size: 14px;
+$h5-size: 13px;
+$h6-size: 12px;
+
+$font-default-size : $h4-size;
+$font-pc-default : $h3-size;
+$font-sub-size : $h6-size;
+
+$title-default-size: $h2-size;
+$title-sub-size: $h3-size;
+
+$img-label-size: 14px;
+
+/////////////////////////////////////////////
+// title font-size
+/////////////////////////////////////////////
+$heading : () !default;
+/////////////////////////////////////////////
+// comment font-size
+/////////////////////////////////////////////
+$comment : () !default;
+
+/////////////////////////////////////////////
+//visual background
+/////////////////////////////////////////////
+$gnb :(
+  'design': 6,
+  'safety': 4,
+  'infotainment': 7,
+  'performance': 9,
+  'convenience': 7,
+  'your': 0
+);
+
